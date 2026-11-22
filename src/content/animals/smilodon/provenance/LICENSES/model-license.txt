@@ -1,0 +1,28 @@
+Model licence record
+====================
+
+Licence: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International (CC BY-NC-SA 4.0)
+Licence URL: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Sketchfab licence label: CC Attribution-NonCommercial-ShareAlike
+
+Attribution: "Ice Age Big Cat" by kenchoo (kenchoo) on Sketchfab,
+CC BY-NC-SA 4.0; reoriented, rescaled and given a project-authored
+eight-second Idle morph for the Prehistoric Animal Museum.
+
+This model is the first owner-approved exception to the local sourcing
+whitelist (normally CC0 / CC BY 4.0 only). Sketchfab offered no
+redistribution-permitted live Smilodon reconstruction after an exhaustive
+15-query search; the decision, its scope (this exhibit only) and the search
+evidence are recorded in assets/candidates/smilodon-recon/INTAKE-EVIDENCE.md.
+The project-wide publication validator lists CC-BY-NC-SA-4.0 as an allowed
+licence. The upstream tool-side profile allowlist (CC0 / CC BY 4.0 only)
+still reports this gate as failed; that tool is not the release gate.
+
+The licence permits sharing and adaptation for non-commercial purposes,
+provided attribution is given, a link to the licence is included, changes
+are indicated and adaptations carry the same licence. This museum is a
+non-commercial personal project; the exhibit and its derived poster,
+portrait poster and thumbnail images therefore carry CC BY-NC-SA 4.0 terms.
+The runtime model records these modifications in provenance.ts. Public
+redistribution decision: approved by the project owner on 2026-11-22.

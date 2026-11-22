@@ -1,0 +1,24 @@
+Derived image record
+====================
+
+Posters and thumbnail were captured on 2026-11-22 from the local review build
+of the accepted runtime presentation (Vite review mode, headless Chrome with
+software WebGL at 1440x900 desktop and 390x844@2x phone), with the approved
+model, material and Idle at its rest pose over the reused mammoth tundra
+backgrounds. Interface chrome (story panel, animal rail, header, gesture
+hint) was hidden before capture; no animal, text or logo was added.
+
+Derivations:
+- images/poster.webp: centre-cropped 16:9 from the desktop capture, Lanczos
+  scaled to the museum-standard 1200x675, WebP quality 80 effort 6. Bytes
+  119600, SHA-256 0d2be44ba0d8964c7c03a9b7ef6911d2deb608e180b68d7e01fccf0ade89ee3e
+- images/poster-portrait.webp: the full 390:844 phone capture, Lanczos scaled
+  to the museum-standard 390x844, WebP quality 80 effort 6. Bytes 55098,
+  SHA-256 b608d765b2395909f6f564e994785add1170cc85b9e7b6dac5e9e574f48571d7
+- images/thumbnail.webp: square centre crop around the animal from the desktop
+  capture, Lanczos scaled to 640x640, WebP quality 80 effort 6. Bytes 51706,
+  SHA-256 c5e3a63c96eeeae721b0e2cc10d2f9031808d5690041787007bcdd4a779dea4b
+
+The same model, material, pose direction and scene are shown in all three
+derivatives. The model stills inherit the CC BY-NC-SA 4.0 terms of the
+upstream model (see model-license.txt); the scene art is project-owned.

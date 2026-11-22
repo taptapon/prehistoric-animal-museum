@@ -3009,6 +3009,90 @@ content, contributions, and Brand Assets follow the separate scopes in
   - Align length to X, center the visible bounds, and apply habitat grounding. Operation: canonical-transform.
   - Export one traceable, closed-loop, in-place project Idle. Operation: replace-runtime-animation.
   - Authored and validator-checked one closed eight-second land-breathe-tail Idle for the shared museum viewer.
+## 剑齿虎 (`smilodon`)
+
+### `audio/narration.en.mp3`
+
+- Asset type: narration
+- Source: Smilodon English narration, generated with Qwen3-TTS CustomVoice on 2026-11-22
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `c7ea1231183caa474e685fa2eb641b5e8c40cc10d5d073ba1641ae311013f3b7`
+- Modifications:
+  - Generated offline from the exact reviewed English two-sentence script with the Serena voice.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `audio/narration.zh-CN.mp3`
+
+- Asset type: narration
+- Source: 剑齿虎 Mandarin narration, generated with Qwen3-TTS CustomVoice on 2026-11-22
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `15355959a2d3a56068d1d92d4b67056d5363a90c8623f713e63ce4d60b3a7d6d`
+- Modifications:
+  - Generated offline from the exact reviewed two-sentence script.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `backgrounds/landscape.webp`
+
+- Asset type: background
+- Source: Clarified woolly mammoth steppe-tundra — landscape, generated with OpenAI built-in image_gen on 2026-08-16
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 剑齿虎 landscape created with OpenAI ImageGen.
+- Runtime SHA-256: `2b23ceaf9e6b7f6d270dcb327254f5be27fb764fc2a845c627fa928aa3c01eb4`
+- Modifications:
+  - Reused the already-reviewed project-authored mammoth Ice Age tundra background without modification; Smilodon lived in Pleistocene North America alongside mammoths, so the cold daylight palette suits the exhibit.
+### `backgrounds/portrait.webp`
+
+- Asset type: background
+- Source: Clarified woolly mammoth steppe-tundra — portrait, generated with OpenAI built-in image_gen on 2026-08-16
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 剑齿虎 portrait created with OpenAI ImageGen.
+- Runtime SHA-256: `3b5e795c4abe470c1ca0cfba9d7834397080b76cb261e2ea1d3f1757f0482335`
+- Modifications:
+  - Reused the already-reviewed project-authored mammoth Ice Age tundra portrait background without modification.
+### `images/poster-portrait.webp`
+
+- Asset type: poster
+- Source: 剑齿虎 transparent portrait model still, derived on 2026-11-22
+- License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: “Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `b608d765b2395909f6f564e994785add1170cc85b9e7b6dac5e9e574f48571d7`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/poster.webp`
+
+- Asset type: poster
+- Source: 剑齿虎 transparent model still, derived on 2026-11-22
+- License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: “Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `0d2be44ba0d8964c7c03a9b7ef6911d2deb608e180b68d7e01fccf0ade89ee3e`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/thumbnail.webp`
+
+- Asset type: thumbnail
+- Source: 剑齿虎 collection thumbnail, derived on 2026-11-22
+- License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: “Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.
+- Runtime SHA-256: `c5e3a63c96eeeae721b0e2cc10d2f9031808d5690041787007bcdd4a779dea4b`
+- Modifications:
+  - Resized and centred the complete silhouette with animal-specific safe margins.
+  - Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks.
+### `model/model.glb`
+
+- Asset type: model
+- Source: [Ice Age Big Cat](https://sketchfab.com/3d-models/ice-age-big-cat-2887bc87fbba4118905a49924a2cb0b9) by kenchoo (Sketchfab user kenchoo)
+- License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: “Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `4e88fdd5605bfbb0ad7ee71d62c875776e7419dbf495de12bbde22d8ff2cc995`
+- Modifications:
+  - Used the CC BY-NC-SA 4.0 source under its own terms recorded here: attribution to kenchoo, non-commercial distribution only, and share-alike for this exhibit and its derived images; the owner-approved intake decision records why the exhibit adopted this licence.
+  - Reoriented the source from its imported length axis into the canonical X body axis and rescaled it to the museum target length, keeping the model grounded for a land exhibit.
+  - Baked and joined the seven source meshes (body, eyes, teeth, tongue, fur shells) into one self-contained mesh and discarded the 50-joint source armature together with its 136-channel animation; this destructive replacement is recorded per the replace-with-project-morph strategy.
+  - Kept the single PBR base-colour material and its two embedded textures unchanged; verified the coat reads naturally under the runtime environment lighting.
+  - Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and tail sway, no root translation, no walking.
+  - The exhibit presents the genus identity with Smilodon fatalis as the scale reference; the parent-facing note records this species-level simplification and the artistic spotted coat.
 ## 索德斯翼龙 (`sordes`)
 
 ### `audio/narration.en.mp3`

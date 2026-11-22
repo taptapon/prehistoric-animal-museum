@@ -1,0 +1,27 @@
+Model source record
+===================
+
+Title: Ice Age Big Cat
+Author: kenchoo (Sketchfab user kenchoo)
+Page: https://sketchfab.com/3d-models/ice-age-big-cat-2887bc87fbba4118905a49924a2cb0b9
+Accessed: 2026-11-22
+Download variant: Sketchfab "Autoconverted format" GLB
+Original file: ice-age-big-cat.glb
+Bytes: 6910644
+SHA-256: d61da8e5856400b098d6143caab6d469e6451959215d0b4dfb0bbe514544d680
+
+Use: live reconstruction carrier for the smilodon exhibit. The model presents
+the genus Smilodon; the exhibit uses the best-known species Smilodon fatalis
+as its scale reference, and the genus-level simplification is recorded in the
+parent-facing classification note.
+
+Direct source verified from the Sketchfab model page and its downloadable GLB
+on 2026-11-22. The page displays the CC BY-NC-SA 4.0 licence and the model
+description ("Smilodon is an extinct genus of felids...") identifies the
+subject without any film, game or other third-party IP reference; the "Ice
+Age" title wording refers to the geological epoch.
+
+Intake screening (15 Sketchfab queries, 76 unique candidates) found no CC0 /
+CC BY 4.0 live Smilodon reconstruction; skull scans, toy/figurine models, an
+"Ice Age" film derivative and one provenance-unclear free-download asset were
+all rejected. Evidence: assets/candidates/smilodon-recon/INTAKE-EVIDENCE.md.

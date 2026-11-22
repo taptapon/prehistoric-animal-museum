@@ -4381,6 +4381,129 @@ export const credits = [
     ]
   },
   {
+    "id": "smilodon:audio/narration.en.mp3",
+    "animalId": "smilodon",
+    "assetPath": "audio/narration.en.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "Smilodon English narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed English two-sentence script with the Serena voice.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "smilodon:audio/narration.zh-CN.mp3",
+    "animalId": "smilodon",
+    "assetPath": "audio/narration.zh-CN.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "剑齿虎 Mandarin narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed two-sentence script.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "smilodon:backgrounds/landscape.webp",
+    "animalId": "smilodon",
+    "assetPath": "backgrounds/landscape.webp",
+    "assetKind": "background",
+    "sourceTitle": "Clarified woolly mammoth steppe-tundra — landscape",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 剑齿虎 landscape created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored mammoth Ice Age tundra background without modification; Smilodon lived in Pleistocene North America alongside mammoths, so the cold daylight palette suits the exhibit."
+    ]
+  },
+  {
+    "id": "smilodon:backgrounds/portrait.webp",
+    "animalId": "smilodon",
+    "assetPath": "backgrounds/portrait.webp",
+    "assetKind": "background",
+    "sourceTitle": "Clarified woolly mammoth steppe-tundra — portrait",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 剑齿虎 portrait created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored mammoth Ice Age tundra portrait background without modification."
+    ]
+  },
+  {
+    "id": "smilodon:images/poster-portrait.webp",
+    "animalId": "smilodon",
+    "assetPath": "images/poster-portrait.webp",
+    "assetKind": "poster",
+    "sourceTitle": "剑齿虎 transparent portrait model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "“Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "smilodon:images/poster.webp",
+    "animalId": "smilodon",
+    "assetPath": "images/poster.webp",
+    "assetKind": "poster",
+    "sourceTitle": "剑齿虎 transparent model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "“Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "smilodon:images/thumbnail.webp",
+    "animalId": "smilodon",
+    "assetPath": "images/thumbnail.webp",
+    "assetKind": "thumbnail",
+    "sourceTitle": "剑齿虎 collection thumbnail",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "“Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.",
+    "modifications": [
+      "Resized and centred the complete silhouette with animal-specific safe margins.",
+      "Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "smilodon:model/model.glb",
+    "animalId": "smilodon",
+    "assetPath": "model/model.glb",
+    "assetKind": "model",
+    "sourceTitle": "Ice Age Big Cat",
+    "author": "kenchoo (Sketchfab user kenchoo)",
+    "licenseName": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "sourceUrl": "https://sketchfab.com/3d-models/ice-age-big-cat-2887bc87fbba4118905a49924a2cb0b9",
+    "attribution": "“Ice Age Big Cat” by kenchoo (Sketchfab user kenchoo), CC BY-NC-SA 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Used the CC BY-NC-SA 4.0 source under its own terms recorded here: attribution to kenchoo, non-commercial distribution only, and share-alike for this exhibit and its derived images; the owner-approved intake decision records why the exhibit adopted this licence.",
+      "Reoriented the source from its imported length axis into the canonical X body axis and rescaled it to the museum target length, keeping the model grounded for a land exhibit.",
+      "Baked and joined the seven source meshes (body, eyes, teeth, tongue, fur shells) into one self-contained mesh and discarded the 50-joint source armature together with its 136-channel animation; this destructive replacement is recorded per the replace-with-project-morph strategy.",
+      "Kept the single PBR base-colour material and its two embedded textures unchanged; verified the coat reads naturally under the runtime environment lighting.",
+      "Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and tail sway, no root translation, no walking.",
+      "The exhibit presents the genus identity with Smilodon fatalis as the scale reference; the parent-facing note records this species-level simplification and the artistic spotted coat."
+    ]
+  },
+  {
     "id": "sordes:audio/narration.en.mp3",
     "animalId": "sordes",
     "assetPath": "audio/narration.en.mp3",

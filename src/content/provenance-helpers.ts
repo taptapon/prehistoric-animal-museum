@@ -1,5 +1,6 @@
 import type {
   AnimalContentEn,
+  AssetLicense,
   AssetProvenance,
   IsoDate,
   Sha256,
@@ -252,6 +253,12 @@ export const reviewedBackgroundSources = {
 >
 
 export const reviewedEnglishNarrationArtifacts = {
+  smilodon: {
+    generatedOn: '2026-11-22',
+    bytes: 132_764,
+    sha256:
+      'c7ea1231183caa474e685fa2eb641b5e8c40cc10d5d073ba1641ae311013f3b7',
+  },
   'dire-wolf': {
     generatedOn: '2026-11-22',
     bytes: 145_484,
@@ -438,6 +445,14 @@ export interface PublishedAssetProvenanceInput {
     readonly generatedOn: IsoDate
     readonly script: string
   }
+  /**
+   * Override for third-party models published under a licence other than the
+   * default CC BY 4.0 (for example an owner-approved CC BY-NC-SA exhibit).
+   * The derived poster, portrait poster and thumbnail records inherit it,
+   * because they are rendered straight from the model stills.
+   */
+  readonly modelLicense?: AssetLicense
+  readonly modelLicenseLabel?: string
 }
 
 export const recomposedCollectionThumbnailDerivation = {
@@ -509,7 +524,9 @@ export function createReviewedEnglishNarrationProvenance(
 export function createPublishedAssetProvenance(
   input: PublishedAssetProvenanceInput,
 ): readonly [AssetProvenance, ...AssetProvenance[]] {
-  const modelAttribution = `“${input.model.source.title}” by ${input.model.source.author}, CC BY 4.0; modified for the Prehistoric Animal Museum.`
+  const license = input.modelLicense ?? modelLicense
+  const licenseLabel = input.modelLicenseLabel ?? 'CC BY 4.0'
+  const modelAttribution = `“${input.model.source.title}” by ${input.model.source.author}, ${licenseLabel}; modified for the Prehistoric Animal Museum.`
   const modelEvidence = [
     'provenance/LICENSES/model-license.txt',
     'provenance/LICENSES/model-source.txt',
@@ -528,7 +545,7 @@ export function createPublishedAssetProvenance(
         sha256: input.model.source.sha256,
         bytes: input.model.source.bytes,
       },
-      license: modelLicense,
+      license,
       runtime: input.model.runtime,
       modifications: input.model.modifications,
       attribution: modelAttribution,
@@ -590,7 +607,7 @@ export function createPublishedAssetProvenance(
         method:
           'Rendered the deterministic first animation frame at the normal 1200 × 675 landscape runtime camera, composition, size, pose, and lighting; preserved transparent pixels outside the model and contact shadow.',
       },
-      license: modelLicense,
+      license,
       runtime: input.poster,
       modifications: [
         'Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.',
@@ -614,7 +631,7 @@ export function createPublishedAssetProvenance(
         method:
           'Rendered the deterministic first animation frame at the normal 390 × 844 portrait runtime camera, composition, size, pose, and lighting; preserved transparent pixels outside the model and contact shadow.',
       },
-      license: modelLicense,
+      license,
       runtime: input.posterPortrait,
       modifications: [
         'Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.',
@@ -644,7 +661,7 @@ export function createPublishedAssetProvenance(
           input.thumbnailDerivation?.method ??
           'Deterministic square crop from the accepted desktop review presentation after hiding all interface chrome.',
       },
-      license: modelLicense,
+      license,
       runtime: input.thumbnail,
       modifications: input.thumbnailDerivation?.modifications ?? [
           'Selected a card-size crop that keeps the animal readable.',

@@ -1,0 +1,33 @@
+Narration rights and listening record
+=====================================
+
+Engine: Qwen3-TTS CustomVoice 0.6B, local offline generation
+Model: Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice
+Revision: 85e237c12c027371202489a0ec509ded67b5e4b5
+Speaker: Serena (built-in CustomVoice speaker)
+Generated on: 2026-11-22
+
+zh-CN
+language: Chinese
+script: 这是剑齿虎，一种和猛犸象生活在同一时代的史前大猫，它不是老虎的祖先。
+        看看它粗壮的身体、短短的尾巴，还有嘴边两根像剑一样的大牙，比今天的狮子还要威风。
+runtime: audio/narration.zh-CN.mp3
+bytes: 160844
+sha256: 15355959a2d3a56068d1d92d4b67056d5363a90c8623f713e63ce4d60b3a7d6d
+duration: 16.03 s, 48 kHz mono MP3, integrated loudness -18.55 LUFS
+
+en
+language: English
+script: Meet Smilodon, the great sabre-toothed cat that lived alongside mammoths long ago.
+        Look at its strong body, short tail and two long dagger-like teeth - it was even stockier than a lion.
+runtime: audio/narration.en.mp3
+bytes: 132764
+sha256: c7ea1231183caa474e685fa2eb641b5e8c40cc10d5d073ba1641ae311013f3b7
+duration: 13.21 s, 48 kHz mono MP3, integrated loudness -18.46 LUFS
+
+Human listening review: approved
+The project owner listened to both complete Serena candidates on 2026-11-22,
+checked name and term pronunciation, pacing, sentence separation, missing
+syllables and artefacts, and suitability for a parent-and-preschool-child
+museum audience, and approved both for publication. The scripts are
+human-reviewed; the audio was synthesized offline with AI.
