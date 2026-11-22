@@ -298,6 +298,12 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
   剑齿虎两次重跑收敛（'y' + tailAxisSign 1），全程 <10 分钟。
 - **来源核验防软 404**：博物馆页面 HTTP 200 不代表活着——SDNHM 剑齿虎页返回 200 但正文是「页面已移动」壳。引用前必须抓正文确认内容真实存在；NPS/Britannica 对部分文章 404/403。本轮可用源：NHMLA `nhm.org/stories/suiting-smilodon` + Wikipedia。
 - **旁白证据先听后写（红线）**：`narration-rights.txt` 的 "Human listening review: approved" **必须在 owner 完整听审通过之后写入**——先写后听等于伪造证据；流程是 TTS → `open` 两支 mp3 请 owner 听 → AskUserQuestion 收结论 → 回填记录与 provenance 哈希。
+- **源材质 metallic 默认值坑（河马案新增，截图变黑即此症）**：源 GLB 材质不设 `metallicFactor`/`roughnessFactor` = glTF 默认 metallic 1.0，在深色/绿色场景环境反射下模型渲染成黑剪影（亮雪地场景看不出问题）。修法：后处理 GLB 的 JSON chunk（binary 不动）置 `metallicFactor: 0` + `roughnessFactor: 0.85`（皮肤类材质），秒级完成；provenance `modifications` 如实记录材质调整。附赠诊断顺序：截图发黑 → 先查材质默认值，再查灯光。
+- **`initial-head-side` 与头向**：gate 按 yaw 旋转后 head/tail 投影 x 判「观众左」——头在 +X 的模型（landmarks `head.position` x 为正）需要 `initialYawDegrees ≈ 145`（等效 -35 的镜像），不要沿用上一只的 -35。每个新模型先看 `head.position` 符号再定 yaw。
+- **轴向映射不可跨模型外推（§10.6 强化）**：剑齿虎 glTF X 长 → 导入 Blender 落 Y；河马 glTF Z 长 → 导入 Blender 落 X。同一 autoconverter 不同源文件结果不同——**每个模型都要按归一化日志 bounds 重新实证**，长度轴跨度必须 = targetLength。
+- **TTS 时长预算**：en 单回合 >18s 会挂 `automatic_checks`；经验安全线 ≤40 词/回合。超长时缩短该语言台词、driver 里注释掉已通过语言只重跑失败方（注意 dict 注释别破坏语法）。
+- **Sketchfab 大响应截断**：搜索响应 >30KB 时直连常被中途截断（`Unfinished string at EOF`）→ 加 `-x http://127.0.0.1:7897 --compressed` 重试至 `jq -e '.results | length'` 通过。
+
 
 
 ## 12. 实际案例：smilodon（2026-11-22，第一只 NC-SA 破例 + 提速验证）
@@ -308,3 +314,14 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
 - **轴向参数**：`sourceBodyAxis 'y'` + `tailAxisSign 1`（源 glTF 长轴 X、根链无旋转；导入后长度落 Blender Y）。`initialYawDegrees -35`、shadow ground 0.35/1.3 与恐狼同款。
 - **背景**：复用猛犸象冰原（provenance 引 `reviewedBackgroundSources.mammoth`），零新图。
 - **工具侧遗留 fail（可忽略）**：qa `rights-and-direct-source`（工具白名单无 NC-SA）、`source-risk-route` 与 `blender-normalization-evidence`（死路链文件）——生产校验器 0 error 全绿。
+
+### 12.1 案例追加：hippopotamus（2026-11-23，第一只现生展品）
+
+- **口径扩展（用户裁定）**：没有合格古生物时馆藏可扩展到现生动物；河马是第一件。家长面必须写明「现生、非灭绝」与批准日期；README 分组照常按陆/空/海。
+- **模型**：sdpm「Hippopotamus」CC BY 4.0（恐狼同作者，馆内信用先例；发现 2024 年 psk98077 同顶点数转载，取 2021 原发布）。史前河马唯一活体复原 gorgops 165 万面超绝对预算 6 倍直接排除。
+- **材质修复**：源材质全默认（metallic 1.0）在绿色丛林背景渲染成黑剪影；后处理 GLB JSON chunk 置 metallic 0 / roughness 0.85 解决（§11.6 新条目）。
+- **朝向**：`sourceBodyAxis 'x'` + `tailAxisSign -1` + `initialYawDegrees 145`——与剑齿虎/恐狼全部不同，证明轴向与头向必须逐模型实证。
+- **背景**：复用 apatosaurus 河边沙洲（半水生生境匹配）；时代错配（中生代植被 vs 现生河马）在 provenance 与家长面双处注明艺术化处理。
+- **旁白**：en 首轮 19.1s 超上限 fail，缩 3 词重生成 17.1s 过；zh 一次过 16.4s。
+- **全程约 1 小时**，与剑齿虎持平（§10 基线生效）。
+
