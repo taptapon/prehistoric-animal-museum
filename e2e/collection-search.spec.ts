@@ -10,6 +10,28 @@ async function openGuide(page: Page) {
   return page.getByRole('dialog', { name: '全馆图鉴' })
 }
 
+test('opens the guide with the search field focused from the stage toolbar', async ({
+  page,
+}) => {
+  const response = await page.goto('./zh-CN/')
+  expect(response?.ok()).toBe(true)
+  await expect(
+    page.getByRole('heading', { level: 2, name: '剑龙' }),
+  ).toBeVisible()
+
+  await page
+    .locator('.stage-actions')
+    .getByRole('button', { name: '搜索动物' })
+    .click()
+
+  const dialog = page.getByRole('dialog', { name: '全馆图鉴' })
+  const search = dialog.getByRole('searchbox', { name: '搜索动物' })
+  await expect(search).toBeFocused()
+
+  await search.fill('翼龙')
+  await expect(dialog.locator('.collection-card').first()).toBeVisible()
+})
+
 test('searches the guide by name and clears back to the elevator', async ({
   page,
 }) => {

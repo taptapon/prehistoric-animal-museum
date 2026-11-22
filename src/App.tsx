@@ -13,6 +13,7 @@ import {
   Minimize2,
   Pause,
   RotateCcw,
+  Search,
   Share2,
   Scaling,
   Volume2,
@@ -939,6 +940,7 @@ function MuseumApp({
   const drawerTriggerRef = useRef<HTMLButtonElement>(null)
   const drawerOrigin = useRef<MotionOrigin | null>(null)
   const collectionTriggerRef = useRef<HTMLElement>(null)
+  const collectionSearchTriggerRef = useRef<HTMLButtonElement>(null)
   const collectionOrigin = useRef<MotionOrigin | null>(null)
   const aboutTriggerRef = useRef<HTMLButtonElement>(null)
   const aboutOrigin = useRef<MotionOrigin | null>(null)
@@ -993,6 +995,9 @@ function MuseumApp({
     useState<ViewerFailureKind | null>(null)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [collectionOpen, setCollectionOpen] = useState(false)
+  const [collectionSearchRequest, setCollectionSearchRequest] = useState(0)
+  const [collectionReturnFocusTarget, setCollectionReturnFocusTarget] =
+    useState<'guide' | 'search'>('guide')
   const [aboutOpen, setAboutOpen] = useState(false)
   const [sharing, setSharing] = useState<{ open: boolean; visit: number } | null>(null)
   const shareOpen = sharing?.open === true
@@ -1040,9 +1045,13 @@ function MuseumApp({
   )
   const activeAnimal = animalIndex.get(activeAnimalId) ?? initialAnimal
   const gestureHintCycle = `${activeAnimal.id}:${loadSnapshot.requestToken}:${viewerRetryKey}`
+  const collectionReturnFocusRef =
+    collectionReturnFocusTarget === 'search'
+      ? collectionSearchTriggerRef
+      : collectionTriggerRef
   const exhibitMotion = useExhibitMotion({
     museum: museumRef, rail: railRef, collectionOpen, animalId: activeAnimal.id,
-    readyId: loadSnapshot.readyAnimalId, returnFocusTo: collectionTriggerRef,
+    readyId: loadSnapshot.readyAnimalId, returnFocusTo: collectionReturnFocusRef,
     collectionKeyboard: collectionOrigin.current?.keyboard ?? false,
   })
   useEffect(() => {
@@ -2633,6 +2642,7 @@ function MuseumApp({
                   leaveAnimalDetailRoute(activeAnimal.id)
                   setDrawerOpen(false)
                   setAboutOpen(false)
+                  setCollectionReturnFocusTarget('guide')
                   setCollectionOpen(true)
                 }}
                 ref={(element) => {
@@ -2650,6 +2660,7 @@ function MuseumApp({
                   collectionOrigin.current = readOrigin(event.currentTarget, event.detail === 0)
                   setDrawerOpen(false)
                   setAboutOpen(false)
+                  setCollectionReturnFocusTarget('guide')
                   setCollectionOpen(true)
                 }}
                 ref={(element) => {
@@ -2711,6 +2722,19 @@ function MuseumApp({
         {!focusMode ? (
           <div aria-hidden={overlayOpen} className="stage-actions" inert={overlayOpen}>
             <LanguageMenu localeHrefs={localeHrefs} />
+            <IconButton
+              icon={Search}
+              label={messages.collection.searchLabel}
+              onClick={(event) => {
+                collectionOrigin.current = readOrigin(event.currentTarget, event.detail === 0)
+                setCollectionReturnFocusTarget('search')
+                setCollectionSearchRequest((request) => request + 1)
+                setDrawerOpen(false)
+                setAboutOpen(false)
+                setCollectionOpen(true)
+              }}
+              ref={collectionSearchTriggerRef}
+            />
             <IconButton
               icon={Share2}
               label={locale === 'zh-CN' ? `分享${activeAnimal.name}` : `Share ${activeAnimal.name}`}
@@ -3047,8 +3071,9 @@ function MuseumApp({
           }
         }}
         open={collectionOpen && !focusMode}
+        focusSearchRequest={collectionSearchRequest}
         motionOrigin={collectionOrigin}
-        returnFocusTo={collectionTriggerRef}
+        returnFocusTo={collectionReturnFocusRef}
       />
       </main>
       <ParentDrawer

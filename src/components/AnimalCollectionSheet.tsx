@@ -24,6 +24,7 @@ export interface CollectionAnimal extends SearchableCollectionAnimal {
 interface AnimalCollectionSheetProps {
   readonly animals: readonly CollectionAnimal[]
   readonly currentAnimalId: string
+  readonly focusSearchRequest?: number
   readonly loadingAnimalId: string | null
   readonly loadingPhase: 'checking-cache' | 'downloading' | 'preparing' | null
   readonly loadingPercent: number | null
@@ -44,6 +45,7 @@ const focusableSelector = [
 export function AnimalCollectionSheet({
   animals,
   currentAnimalId,
+  focusSearchRequest,
   loadingAnimalId,
   loadingPhase,
   loadingPercent,
@@ -58,6 +60,7 @@ export function AnimalCollectionSheet({
   const dialogRef = useRef<HTMLElement>(null)
   const backdropRef = useRef<HTMLDivElement>(null)
   const searchInputRef = useRef<HTMLInputElement>(null)
+  const handledFocusSearchRequestRef = useRef(focusSearchRequest ?? 0)
   const titleId = useId()
   const [query, setQuery] = useState('')
   const { present, exiting: isExiting, handle } = usePanelMotion({
@@ -107,7 +110,9 @@ export function AnimalCollectionSheet({
     }
 
     const returnTarget = returnFocusTo.current
-    dialogRef.current?.focus()
+    if (!dialogRef.current?.contains(document.activeElement)) {
+      dialogRef.current?.focus()
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab' || !dialogRef.current) {
@@ -142,6 +147,18 @@ export function AnimalCollectionSheet({
       setQuery('')
     }
   }, [open])
+
+  useEffect(() => {
+    if (!open || !present) {
+      return
+    }
+    const request = focusSearchRequest ?? 0
+    if (request === handledFocusSearchRequestRef.current) {
+      return
+    }
+    handledFocusSearchRequestRef.current = request
+    searchInputRef.current?.focus()
+  }, [focusSearchRequest, open, present])
 
   if (!present) {
     return null
