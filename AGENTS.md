@@ -44,6 +44,7 @@ npm run test:e2e                           # Playwright e2e（本地 headed，�
 
 ### Step 1 来源与权利（先于一切）
 
+- 素材检索一律按 §11：Sketchfab 优先，白名单只有 CC0 / CC BY 4.0。
 - 记录来源页、作者、URL、访问日期、许可证、下载变体；权利链解释不清 → 停止。
 - 首选 CC0 / CC BY 4.0 / public domain / 项目自制；复核上传者描述，若指向影视或游戏第三方模型，先确认原权利人允许再分发。
 - 多角度、移动端检视模型：优先轮廓可信、表面质量、儿童友好、与现有馆藏有差异。
@@ -200,3 +201,75 @@ src/content/animals/<id>/
 - 生产包：`src/content/animals/dire-wolf/`；`mainCollection.animalIds` 置顶；`reviewedEnglishNarrationArtifacts` 登记英文旁白哈希。
 - 生成物：`generate:credits` 更新 credits 与 notices；`render-model-previews --target=production dire-wolf` 生成预览与 manifest。
 - 素材取舍：背景复用已审的猛犸象冰原背景（provenance 引用 `reviewedBackgroundSources.mammoth` 并注明未修改）；模型来自 Sketchfab CC BY 4.0，在 provenance 与家长面注明「按现生灰狼体态复原」。
+
+## 10. 耗时复盘与提速清单（dire-wolf 实测，2026-11-22）
+
+本次单只动物约 4 小时，其中大半耗在环境首装与流程试错。按收益从高到低：
+
+1. **先判路径，再动手**：官方 onboarding 采集门目前走不通（应用未暴露 `data-loaded-glb-sha256`）。遇到新动物先确认这一点，直接走 guide §7 的「流程外制作」，**不要**再试 `stage-lock` / `l3-acceptance` / `capture plan` 链——本次在这条死路上来回耗费约三分之一时间。
+2. **背景优先复用**：从已发布动物里挑同生境背景，拷贝 + provenance 写 `reviewedBackgroundSources.<animal>` 指针并注明未修改。跳过图像生成、审核与场景一致性返工。
+3. **模型筛选三连**：Sketchfab API 一次返回 `license.label` / `vertexCount` / `animationCount`；先拉缩略图目检（背景、姿态、儿童友好度），合格再下载。直接排除：NonCommercial/NoDerivs、游戏/影视衍生（Warcraft、权游、Ice Age 等）、纯标本扫描、**浮雕板**（包围盒任一维 ≪ 其余两维，如 16×19×0.65）。
+4. **下载防断**：Sketchfab 签名 CDN 走代理，`curl -C -` 断点续传；下载后立即 `shasum -a 256` 记源哈希。
+5. **目录占位坑**：`run init` 要求 `assets/candidates/<id>/` 不存在。前期调研/截图放 `assets/candidates/<id>-recon/`，正式 init 前再建目录。
+6. **朝向一次到位**：`sourceBodyAxis: 'y'`（glTF 中 Z 为长度轴最常见，导入 Blender 即 Y），`'z'` 只用于竖长模型；`tailAxisSign` 与旋转后尾端所在 ±X 一致（y→+1，z→-1）。先用 normalizer 自带的 5 角度渲染目检，再往下走。
+7. **两个高频硬失败**：接触影未覆盖四爪 → `shadowScale ≥ 1.3`；预览整张不透明 → 见 §7 的 `.museum-page` 透明补丁。
+8. **海报尺寸写死**：横版 1200×675、竖版 390×844（`build:site` 会直接把 poster 合成进 1200×675 社交卡，超尺寸即报 `Image to composite must have same dimensions or smaller`）。海报 ≤ 500 KiB，缩略图 ≤ 120 KiB。
+9. **生成物顺序**：每次改内容或图片后，先 `npm run generate:credits` 再 `npm run generate:seo-social-cards`；模型或 presentation 变动重跑 `render-model-previews`。漏掉的症状就是 build 报 `GENERATED_CREDITS_STALE` / `SEO social card manifest is stale`。
+10. **Playwright 版本坑**：用 `./node_modules/.bin/playwright install chromium-headless-shell`；`npx playwright` 可能解析到全局更新的版本、下载与项目不匹配的 revision（本次白等十几分钟）。国内直连 npmmirror 镜像，别串长命令（见 §7）。
+11. **旁白路线**：TTS 运行时已装在 `~/.runtime/qwen3-tts`（uv venv + 固定 revision 模型）。`generate_narration.py` 被 model-lock 门挡住时，用 fallback 驱动 `importlib` 加载同一模块的 `normalize` / `artifact_metrics` / `automatic_checks`，保证证据格式与官方一致。CPU 生成约 3–4 分钟/轮 × 2 轮 × 2 语言。
+12. **验证并行**：`tsc -b` 与 `validate:content` 串行前置，`vitest run` 丢后台，`build:site` 最后跑；失败优先排查 credits / SEO / 海报尺寸三连。
+
+**下一只动物的目标基线**（环境已就绪时）：≤ 60–90 分钟——模型筛选 15m、管线与 QA 15m、海报缩略图 10m、旁白生成与试听 15m、验证与提交 15m。
+
+**最短路径**：
+1. 选模型（缩略图目检 + 许可过滤）
+2. 下载 + 哈希 → 决定是否复用背景
+3. 写 profile（轴/尾向/影/初始视角）→ normalizer
+4. `qa --model-only` 通过
+5. 应用内截图 → 海报/缩略图（标准尺寸）
+6. 写内容（双语 2 句 + 家长面 + 来源）→ TTS 生成 → owner 试听
+7. 生产包 + provenance/LICENSES → credits/SEO/预览
+8. validate → tsc → vitest → build:site → 提交推 fork
+
+## 11. 素材源与检索规程（Sketchfab 优先）
+
+**主源固定为 Sketchfab**，其它源只在 Sketchfab 穷尽后启用（见本节末尾）。检索分「粗筛 → 目检 → 实审」三段，全部完成再下载。
+
+### 11.1 粗筛：API 检索（匿名可查）
+
+```sh
+# 宽词优先：先按大类扫，再收敛到属名；一次拿回许可与几何规模
+curl -s "https://api.sketchfab.com/v3/search?type=models&q=prehistoric+wolf&downloadable=true&count=24&sort_by=-likeCount" \
+| jq -r '.results[] | [.name, .license.label, (.vertexCount|tostring), (.animationCount|tostring), .user.username, .uid] | @tsv'
+```
+
+- 关键词顺序：大类词（`dinosaur` / `prehistoric mammal` / `ice age` / `pleistocene` / `extinct`）→ 属名/英文俗名；同一目标至少换 3 组词再判定「没有」。
+- 必须带 `downloadable=true`；`sort_by=-likeCount` 用来优先看社区验证过的资产，但**排序不代表可商用**。
+- 许可白名单只有两种：`CC0 Public Domain` / `CC Attribution`（按项目口径视为 CC BY 4.0）。
+- 直接排除任何带 `NonCommercial` / `NoDerivs` / `ShareAlike` 的标签（含博物馆账号常见的 CC BY-NC-SA，如 NHMLA/La Brea 的恐狼）。
+- 名称/描述黑名单词：`warcraft` `elder scrolls` `skyrim` `game of thrones` `stark` `ice age`（电影）`jurassic` `ark` `carnivores` `turok` `palworld` `pokemon` `furry` `print` `low poly game` ——命中即疑为第三方 IP 或游戏衍生，先看描述确认原权利人，否则弃用。
+- 标本/骨骼扫描（skull / jaw / bone / specimen / VCU / LACMIP 等）不作为活体展品候选。
+
+### 11.2 目检：缩略图 → 包围盒
+
+- 看多角度缩略图：轮廓是否是目标动物、姿态是否平和（拒绝呲牙/攻击性造型）、是否照片级纹理、是否有明显破面。
+- 用 GLB 头解析包围盒，任一维 ≪ 另两维（如 16.85 × 19.63 × **0.65**）= 浮雕板/贴图板，直接排除。
+- 记录候选表到 `assets/candidates/<id>-recon/INTAKE-EVIDENCE.md`：名称、uid、作者、许可、顶点/动画数、缩略图判读、取舍理由。
+
+### 11.3 下载：owner token（不落盘）
+
+- 搜索接口匿名可用；`/v3/models/<uid>/download` 需要 **owner 的 Sketchfab API token**（设置页 → API Token）。向用户口头索取，只用于当次 curl，**绝不写入仓库、脚本、日志或记忆文件**；交付完成后提醒用户重置 token。
+- signed CDN（`sketchfab-prod-media.s3.amazonaws.com`）直连会超时：走 Clash 代理 `-x http://127.0.0.1:7897`，并用 `curl -C -` 断点续传；完成后比对 `glb.size` 与本地字节数，立即 `shasum -a 256`。
+- 下载变体固定选 **Autoconverted → GLB**；不要 source format（.blend/.fbx 管线不直接吃）。
+- 原始文件与下载回执、许可截图全部留在 `assets/candidates/<id>-recon/`（git 忽略），绝不 `git add -f`。
+
+### 11.4 备选源（仅 Sketchfab 穷尽后）
+
+| 源 | 许可 | 适用 |
+| --- | --- | --- |
+| Smithsonian Open Access 3D | 多为 CC0 | 标本/文物扫描，活体复原少 |
+| Poly Haven | CC0 | 场景道具、环境资产，非动物主体 |
+| Wikimedia Commons | 混合，逐件核 | 少量 3D 扫描 |
+| 项目自建（Blender） | 项目自有 | 无合格外部模型时的兜底，成本高 |
+
+博物馆官方账号（NHMLA、La Brea 等）模型质量高但普遍 CC BY-NC-SA，**按现行白名单不可用**；若用户明确要破例，必须先改白名单决策并记录，不得默认放行。
