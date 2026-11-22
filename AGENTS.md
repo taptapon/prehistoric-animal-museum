@@ -10,6 +10,8 @@
 > 本文件只补充落地约定，**不削弱任何上游门禁**；与上游冲突时按上游执行，并把差异报告给用户。
 > 仓库定位：`origin` = 个人 fork，`upstream` = 原作者仓；改动尽量保持「单动物目录 + 最小注册点」，便于与上游合并。
 
+> **外发红线（最高优先级）**：只向 `origin`（个人 fork）提交 / 推送；**禁止**向 `upstream`（原作者仓）开 PR 或推送。确需向上游贡献时，必须先取得用户明确同意，并显式指定 `--repo s010s/...`，不得依赖 `gh` 的默认解析。本仓已设防护：`gh repo set-default` 指向个人 fork；`upstream` 的 push URL 为 `DISABLE`（fetch 仍正常）。任何外发动作（PR / issue / 评论 / 发布）执行前都要说明影响面并取得同意。
+
 ## 0. 速查命令
 
 ```sh
@@ -122,7 +124,7 @@ src/content/animals/<id>/
 
 ### Step 8 提交
 
-- 日常 push 到 `origin`（个人 fork）；同步上游用 `git fetch upstream && git merge upstream/main`（或 `gh repo sync`）。
+- 日常 push 到 `origin`（个人 fork）；同步上游用 `git fetch upstream && git merge upstream/main`（或 `gh repo sync`）。`upstream` 只用于 fetch，push URL 已是 `DISABLE`，不要改回。
 - 不 `--force`、不 `--no-verify`；提交前做敏感信息自检。
 - 生成物随代码一起提交，但必须由脚本生成。
 - 单动物建议拆 commit：① review 草稿 ② 生产包 ③ 注册 / 生成物 / README。
