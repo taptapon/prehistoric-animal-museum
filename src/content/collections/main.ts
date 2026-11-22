@@ -3,6 +3,7 @@ import type { AnimalCollection } from '../types'
 export const mainCollection = {
   id: 'main',
   animalIds: [
+    'hippopotamus',
     'smilodon',
     'dire-wolf',
     'stegosaurus',

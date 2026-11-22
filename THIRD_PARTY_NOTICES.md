@@ -1423,6 +1423,89 @@ content, contributions, and Brand Assets follow the separate scopes in
 - Modifications:
   - Prepared a self-contained budgeted derivative with a segmented appendage rig.
   - Authored a closed eight-second Idle with visible staggered motion through all twenty segmented appendage chains, including the terminal support-leg sections; kept the spine-bearing roots stable.
+## 河马 (`hippopotamus`)
+
+### `audio/narration.en.mp3`
+
+- Asset type: narration
+- Source: Hippopotamus English narration, generated with Qwen3-TTS CustomVoice on 2026-11-23
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `d70816b53ae5ce4fc07528d11c50e5206df2282e906401d95ac4b6c9d4145817`
+- Modifications:
+  - Generated offline from the exact reviewed English two-sentence script with the Serena voice.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `audio/narration.zh-CN.mp3`
+
+- Asset type: narration
+- Source: 河马 Mandarin narration, generated with Qwen3-TTS CustomVoice on 2026-11-23
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `3ead943ee3f57f549fe3b6d594bc68b7bdd2cdaef8ba243ec217fef1c58e46b2`
+- Modifications:
+  - Generated offline from the exact reviewed two-sentence script.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `backgrounds/landscape.webp`
+
+- Asset type: background
+- Source: Apatosaurus green Morrison gallery forest — landscape, generated with OpenAI built-in image_gen on 2026-08-09
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 河马 landscape created with OpenAI ImageGen.
+- Runtime SHA-256: `7221069b1c33fc389a03d93c5c508ec6696ae269951ebc74ccd9101d2b910a27`
+- Modifications:
+  - Reused the already-reviewed project-authored apatosaurus Morrison river-corridor background without modification; its water-and-sandbank clearing matches the hippopotamus's semi-aquatic river-edge life, and the parent-facing note records the scene as an artistic setting.
+### `backgrounds/portrait.webp`
+
+- Asset type: background
+- Source: Apatosaurus green Morrison gallery forest — portrait, generated with OpenAI built-in image_gen on 2026-08-09
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 河马 portrait created with OpenAI ImageGen.
+- Runtime SHA-256: `c70e720ee3ce56507cf1b1b49986a976f1ef04ea0d37190a52b5ef2e1daff9bc`
+- Modifications:
+  - Reused the already-reviewed project-authored apatosaurus portrait background without modification.
+### `images/poster-portrait.webp`
+
+- Asset type: poster
+- Source: 河马 transparent portrait model still, derived on 2026-11-23
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `8bcecb334dc9928530e61e8ba5691b78cddb137e32d3a63339166292cc6253e3`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/poster.webp`
+
+- Asset type: poster
+- Source: 河马 transparent model still, derived on 2026-11-23
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `8e45682e0de643307c587e155fe4c25c943b321b6497a3bc7d7a31a377d6722b`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/thumbnail.webp`
+
+- Asset type: thumbnail
+- Source: 河马 collection thumbnail, derived on 2026-11-23
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.
+- Runtime SHA-256: `9be2858236eaa6721f3d9a9892287a2d50d2e7acd1e1fe5d384f0515c4428432`
+- Modifications:
+  - Resized and centred the complete silhouette with animal-specific safe margins.
+  - Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks.
+### `model/model.glb`
+
+- Asset type: model
+- Source: [Hippopotamus](https://sketchfab.com/3d-models/hippopotamus-9090d29e8c5c49ea963c91faec699482) by SDPM (Sketchfab user sdpm)
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `931bfedba10ac9a9fc335f1d798389208c91921b530d63f5546e1f52fcb6604e`
+- Modifications:
+  - Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.
+  - Reoriented the source from its imported length axis into the canonical X body axis and rescaled it to the museum target length, keeping the model grounded for a land exhibit.
+  - Adjusted the single PBR material from its unset defaults (which resolved to full metallic and made the coat read as a black silhouette under the green scene lighting) to metallic 0.0 and roughness 0.85, matching matte hippopotamus skin; the base-colour texture itself is untouched.
+  - Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and tail sway, no root translation, no walking.
+  - The exhibit presents the living common hippopotamus as the museum's first living-species exhibit under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing.
 ## 鱼龙类 (`ichthyosaur`)
 
 ### `audio/narration.en.mp3`

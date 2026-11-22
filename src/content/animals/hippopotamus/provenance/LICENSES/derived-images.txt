@@ -1,0 +1,24 @@
+Derived image record
+====================
+
+Posters and thumbnail were captured on 2026-11-23 from the local review build
+of the accepted runtime presentation (Vite review mode, headless Chrome with
+software WebGL at 1440x900 desktop and 390x844@2x phone), with the approved
+model, matte-adjusted material and Idle at its rest pose over the reused
+apatosaurus river-corridor backgrounds. Interface chrome (story panel,
+animal rail, header, gesture hint) was hidden before capture; no animal,
+text or logo was added.
+
+Derivations:
+- images/poster.webp: centre-cropped 16:9 from the desktop capture, Lanczos
+  scaled to the museum-standard 1200x675, WebP quality 80 effort 6. Bytes
+  122520, SHA-256 8e45682e0de643307c587e155fe4c25c943b321b6497a3bc7d7a31a377d6722b
+- images/poster-portrait.webp: the full 390:844 phone capture, Lanczos scaled
+  to the museum-standard 390x844, WebP quality 80 effort 6. Bytes 78520,
+  SHA-256 8bcecb334dc9928530e61e8ba5691b78cddb137e32d3a63339166292cc6253e3
+- images/thumbnail.webp: square centre crop around the animal from the desktop
+  capture, Lanczos scaled to 640x640, WebP quality 80 effort 6. Bytes 54802,
+  SHA-256 9be2858236eaa6721f3d9a9892287a2d50d2e7acd1e1fe5d384f0515c4428432
+
+The same model, material, pose direction and scene are shown in all three
+derivatives.

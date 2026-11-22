@@ -2054,6 +2054,128 @@ export const credits = [
     ]
   },
   {
+    "id": "hippopotamus:audio/narration.en.mp3",
+    "animalId": "hippopotamus",
+    "assetPath": "audio/narration.en.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "Hippopotamus English narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed English two-sentence script with the Serena voice.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "hippopotamus:audio/narration.zh-CN.mp3",
+    "animalId": "hippopotamus",
+    "assetPath": "audio/narration.zh-CN.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "河马 Mandarin narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed two-sentence script.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "hippopotamus:backgrounds/landscape.webp",
+    "animalId": "hippopotamus",
+    "assetPath": "backgrounds/landscape.webp",
+    "assetKind": "background",
+    "sourceTitle": "Apatosaurus green Morrison gallery forest — landscape",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 河马 landscape created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored apatosaurus Morrison river-corridor background without modification; its water-and-sandbank clearing matches the hippopotamus's semi-aquatic river-edge life, and the parent-facing note records the scene as an artistic setting."
+    ]
+  },
+  {
+    "id": "hippopotamus:backgrounds/portrait.webp",
+    "animalId": "hippopotamus",
+    "assetPath": "backgrounds/portrait.webp",
+    "assetKind": "background",
+    "sourceTitle": "Apatosaurus green Morrison gallery forest — portrait",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 河马 portrait created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored apatosaurus portrait background without modification."
+    ]
+  },
+  {
+    "id": "hippopotamus:images/poster-portrait.webp",
+    "animalId": "hippopotamus",
+    "assetPath": "images/poster-portrait.webp",
+    "assetKind": "poster",
+    "sourceTitle": "河马 transparent portrait model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "hippopotamus:images/poster.webp",
+    "animalId": "hippopotamus",
+    "assetPath": "images/poster.webp",
+    "assetKind": "poster",
+    "sourceTitle": "河马 transparent model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "hippopotamus:images/thumbnail.webp",
+    "animalId": "hippopotamus",
+    "assetPath": "images/thumbnail.webp",
+    "assetKind": "thumbnail",
+    "sourceTitle": "河马 collection thumbnail",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.",
+    "modifications": [
+      "Resized and centred the complete silhouette with animal-specific safe margins.",
+      "Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "hippopotamus:model/model.glb",
+    "animalId": "hippopotamus",
+    "assetPath": "model/model.glb",
+    "assetKind": "model",
+    "sourceTitle": "Hippopotamus",
+    "author": "SDPM (Sketchfab user sdpm)",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://sketchfab.com/3d-models/hippopotamus-9090d29e8c5c49ea963c91faec699482",
+    "attribution": "“Hippopotamus” by SDPM (Sketchfab user sdpm), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.",
+      "Reoriented the source from its imported length axis into the canonical X body axis and rescaled it to the museum target length, keeping the model grounded for a land exhibit.",
+      "Adjusted the single PBR material from its unset defaults (which resolved to full metallic and made the coat read as a black silhouette under the green scene lighting) to metallic 0.0 and roughness 0.85, matching matte hippopotamus skin; the base-colour texture itself is untouched.",
+      "Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and tail sway, no root translation, no walking.",
+      "The exhibit presents the living common hippopotamus as the museum's first living-species exhibit under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing."
+    ]
+  },
+  {
     "id": "ichthyosaur:audio/narration.en.mp3",
     "animalId": "ichthyosaur",
     "assetPath": "audio/narration.en.mp3",

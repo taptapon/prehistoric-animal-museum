@@ -253,6 +253,12 @@ export const reviewedBackgroundSources = {
 >
 
 export const reviewedEnglishNarrationArtifacts = {
+  hippopotamus: {
+    generatedOn: '2026-11-23',
+    bytes: 172_124,
+    sha256:
+      'd70816b53ae5ce4fc07528d11c50e5206df2282e906401d95ac4b6c9d4145817',
+  },
   smilodon: {
     generatedOn: '2026-11-22',
     bytes: 132_764,

@@ -1,0 +1,31 @@
+Model source record
+===================
+
+Title: Hippopotamus
+Author: SDPM (Sketchfab user sdpm)
+Page: https://sketchfab.com/3d-models/hippopotamus-9090d29e8c5c49ea963c91faec699482
+Accessed: 2026-11-23
+Download variant: Sketchfab "Autoconverted format" GLB
+Original file: hippopotamus.glb
+Bytes: 2036000
+SHA-256: 5e70786ce8e3d3a22e4a8010f9ca3c7609dd15a945d26d1b8385aa89b6dde849
+
+Use: live reconstruction carrier for the hippopotamus exhibit, the museum's
+first living-species exhibit (owner-approved collection expansion,
+2026-11-23). The model presents the living common hippopotamus
+(Hippopotamus amphibius); no reconstruction simplification is claimed
+beyond the standard museum presentation scale.
+
+Direct source verified from the Sketchfab model page and its downloadable
+GLB on 2026-11-23. The page displays the Creative Commons Attribution
+licence. The same author (sdpm) supplied the reviewed Italian white wolf
+used for the dire-wolf exhibit; a 2024 re-upload of this same model by
+another account (psk98077, identical vertex count) was identified and the
+original 2021 source preferred.
+
+Intake screening (6 Sketchfab queries, 44 unique candidates) found only one
+live prehistoric hippopotamus reconstruction (Hippopotamus gorgops by
+hippohipo, CC BY) whose 1.65-million-face geometry exceeds the absolute
+model budget sixfold; film, game and sculpture derivatives (Madagascar's
+Gloria, Planet Zoo, billiard-ball and Egyptian figurine models) were
+rejected. Evidence: assets/candidates/hippopotamus-recon/recon/.

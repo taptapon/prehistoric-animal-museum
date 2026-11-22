@@ -1,0 +1,33 @@
+Narration rights and listening record
+=====================================
+
+Engine: Qwen3-TTS CustomVoice 0.6B, local offline generation
+Model: Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice
+Revision: 85e237c12c027371202489a0ec509ded67b5e4b5
+Speaker: Serena (built-in CustomVoice speaker)
+Generated on: 2026-11-23
+
+zh-CN
+language: Chinese
+script: 这是河马，一种整天泡在河里和泥塘里的大动物，它的眼睛、耳朵和鼻孔都长在头顶上。
+        看看它圆圆的大身体和能张得特别大的嘴巴，晚上它会上岸吃好多青草。
+runtime: audio/narration.zh-CN.mp3
+bytes: 164924
+sha256: 3ead943ee3f57f549fe3b6d594bc68b7bdd2cdaef8ba243ec217fef1c58e46b2
+duration: 16.42 s, 48 kHz mono MP3, integrated loudness -18.46 LUFS
+
+en
+language: English
+script: Meet the hippopotamus, a big river animal with its eyes, ears and nostrils on top of its head.
+        Look at its round barrel body and its huge wide-opening mouth - at night it walks onto land to eat lots of grass.
+runtime: audio/narration.en.mp3
+bytes: 172124
+sha256: d70816b53ae5ce4fc07528d11c50e5206df2282e906401d95ac4b6c9d4145817
+duration: 17.14 s, 48 kHz mono MP3, integrated loudness -18.49 LUFS
+
+Human listening review: approved
+The project owner listened to both complete Serena candidates on 2026-11-23,
+checked name and term pronunciation, pacing, sentence separation, missing
+syllables and artefacts, and suitability for a parent-and-preschool-child
+museum audience, and approved both for publication. The scripts are
+human-reviewed; the audio was synthesized offline with AI.
