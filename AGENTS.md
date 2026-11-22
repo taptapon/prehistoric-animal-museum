@@ -273,3 +273,38 @@ curl -s "https://api.sketchfab.com/v3/search?type=models&q=prehistoric+wolf&down
 | 项目自建（Blender） | 项目自有 | 无合格外部模型时的兜底，成本高 |
 
 博物馆官方账号（NHMLA、La Brea 等）模型质量高但普遍 CC BY-NC-SA，**按现行白名单不可用**；若用户明确要破例，必须先改白名单决策并记录，不得默认放行。
+
+### 11.5 许可例外程序（2026-11-22 smilodon 案确立）
+
+Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体复原时，走破例：
+
+1. **先给用户出选择题**：唯一合格 NC-SA 候选 / Blender 自建 / 换目标动物。破例必须用户明确裁定，检索排除证据写 `assets/candidates/<id>-recon/INTAKE-EVIDENCE.md`（该文件即破例决策记录）。
+2. **三层许可口径要分清**：生产校验器 `scripts/content-validation.ts` `publicationLicenseAllowlist` **本身就含 `CC-BY-NC-SA-4.0`**；收紧的是本文件 §11 本地白名单；onboarding 工具 `tools/animal-onboarding/src/profile.ts` 的白名单只有 CC0/CC-BY，其对 NC-SA 案例恒报 fail——**该工具不是发布门，忽略**。
+3. **provenance 接线**：`createPublishedAssetProvenance` 支持 `modelLicense` + `modelLicenseLabel` 可选覆盖（默认 CC BY 4.0 不变）；NC-SA 会随模型 still 派生（poster×2、thumbnail）自动继承，`redistributionAllowed` 仍为 true（NC 管商用不管再分发）。
+4. **NC 影响面须向用户明示**：该展品不可商用；个人/家庭项目无实际影响。
+
+
+### 11.6 截图与无头浏览器补充坑（smilodon 案新增）
+
+- **生产直通路径已验证两次**：恐狼与剑齿虎都是**无 review 草稿提交**、单提交直上生产（git 历史无 `src/review/animals/<id>/` 残留）。§2 Step 3 的 review 草稿三件套仅在需要走 `npm run review` 评审页时才建；截图只需生产文件 + 注册。
+- **capture 前先放占位三件套**：`images/{poster,poster-portrait,thumbnail}.webp` 与 `audio/narration.*.mp3` 必须先有占位文件（从猛犸象拷贝即可），否则 import 断、动物卡点不亮（`data-ready-animal-id` 为空）。占位后截图、TTS、再回填真品与 provenance 哈希。
+- **无头 Chrome 默认无 WebGL**：模型区显示「这个浏览器现在不能显示 3D 模型」即此症。启动参数须加 `--use-angle=swiftshader --enable-unsafe-swiftshader`（`--disable-gpu` 反而触发该问题）。复用 capture 脚本模板 `assets/candidates/<id>-recon/recon/capture-<id>.mjs`（恐狼版可直拷改名）。
+- **`qa --model-only` 必须从仓根跑**：在 `tools/animal-onboarding/` 目录内跑会报 "profile escapes the repository"。
+- **工具 qa 与发布解耦**：`--model-only` 通过 `initial-head-side`（`initialYawDegrees -35`）与全部模型预算门即够用；rights/risk-route/normalization-evidence 三个 fail 属 §10.1 死路链与 §11.5 工具白名单，不阻塞发布。
+- **轴向实证法（§10.6 强化）**：`sourceBodyAxis` 初猜 + 归一化日志 `boundsMin/Max` 核对（长度轴跨度应 = targetLength），再用端部顶点高度采样定 `tailAxisSign`（头端高、尾端低）：
+  ```sh
+  blender --background --factory-startup --python-expr "...按 x 正负端 slab 统计 meanZ/maxZ..."
+  ```
+  剑齿虎两次重跑收敛（'y' + tailAxisSign 1），全程 <10 分钟。
+- **来源核验防软 404**：博物馆页面 HTTP 200 不代表活着——SDNHM 剑齿虎页返回 200 但正文是「页面已移动」壳。引用前必须抓正文确认内容真实存在；NPS/Britannica 对部分文章 404/403。本轮可用源：NHMLA `nhm.org/stories/suiting-smilodon` + Wikipedia。
+- **旁白证据先听后写（红线）**：`narration-rights.txt` 的 "Human listening review: approved" **必须在 owner 完整听审通过之后写入**——先写后听等于伪造证据；流程是 TTS → `open` 两支 mp3 请 owner 听 → AskUserQuestion 收结论 → 回填记录与 provenance 哈希。
+
+
+## 12. 实际案例：smilodon（2026-11-22，第一只 NC-SA 破例 + 提速验证）
+
+- **耗时**：约 1 小时（恐狼 4 小时 → §10 清单生效；含 15 组检索、两次轴向重跑、TTS 与全链验证）。
+- **模型**：kenchoo「Ice Age Big Cat」CC BY-NC-SA 4.0（19,296 顶点 / 37,240 面 / 2 PNG 贴图 / 50 骨骼 + 1 源动画，全部破坏性替换记录在 provenance）。检索证据与破例决策：`assets/candidates/smilodon-recon/INTAKE-EVIDENCE.md`。
+- **改动面**（与恐狼完全同构）：`src/content/animals/smilodon/` 生产包 + `mainCollection` 置顶 + `reviewedEnglishNarrationArtifacts` 登记 + credits/预览生成物 + 双语 README；`provenance-helpers.ts` 新增 `modelLicense`/`modelLicenseLabel` 可选覆盖（向后兼容）与 smilodon 英文旁白条目。
+- **轴向参数**：`sourceBodyAxis 'y'` + `tailAxisSign 1`（源 glTF 长轴 X、根链无旋转；导入后长度落 Blender Y）。`initialYawDegrees -35`、shadow ground 0.35/1.3 与恐狼同款。
+- **背景**：复用猛犸象冰原（provenance 引 `reviewedBackgroundSources.mammoth`），零新图。
+- **工具侧遗留 fail（可忽略）**：qa `rights-and-direct-source`（工具白名单无 NC-SA）、`source-risk-route` 与 `blender-normalization-evidence`（死路链文件）——生产校验器 0 error 全绿。
