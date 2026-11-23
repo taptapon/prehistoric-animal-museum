@@ -29,6 +29,7 @@
 - **内网路无 Access 门禁**（同 stock 口径：家庭 WiFi 可信，在家省 OTP）；出门走 CF 隧道照旧 OTP。
 - **路由器侧**：小米路由自定义 hosts 增第三行 `192.168.31.172 museum.jasonteam.top`（精确匹配，必须写完整子域；该路由重启有丢配置前科，动/重启后与静态绑定一并复核）。
 - **验证**：`curl --resolve museum.jasonteam.top:443:192.168.31.172 https://museum.jasonteam.top/` → 200。
+- **前端入口徽标**（2026-11-23 加）：页头小徽标双语显示「内网直连 / 公网访问」；判定 = 同源 HEAD 探测响应头 `cf-ray` 有无（CF 边缘签名，内网 Caddy 给不出）→ 有 = 公网；探测失败（如 Access 会话过期被跨源重定向）按公网兜底。非 jasonteam.top 域（本地评审 / e2e / prerender）不渲染。实现 = `src/components/{entry-detection.ts,EntryBadge.tsx}`，测试 `tests/entry-detection.test.ts`。
 - **回滚（仅内网入口下线）**：删 `~/etc/caddy/Caddyfile` 的 museum 块 + `sudo launchctl kickstart -k system/com.jianghong.caddy`（改前备份 `~/etc/caddy/Caddyfile.bak-20261123-museum`）；可选删路由器 hosts 行。公网隧道入口完全独立，不受影响。
 
 ## LaunchAgent（`~/Library/LaunchAgents/`，均 KeepAlive ThrottleInterval=10）

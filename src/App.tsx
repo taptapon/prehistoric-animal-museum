@@ -46,6 +46,7 @@ import {
   type CollectionAnimal,
 } from './components/AnimalCollectionSheet'
 import { AboutDrawer } from './components/AboutDrawer'
+import { EntryBadge } from './components/EntryBadge'
 import { GitHubStarPrompt } from './components/GitHubStarPrompt'
 import { IconButton } from './components/IconButton'
 import { LanguageMenu } from './components/LanguageMenu'
@@ -2536,6 +2537,7 @@ function MuseumApp({
                 <Info aria-hidden="true" size={16} strokeWidth={2.1} />
                 <span>{messages.creatorBrand}</span>
               </button>
+              <EntryBadge />
             </div>
             <div className="title-lockup" key={`title-${activeAnimal.id}`}>
               <div className="animal-copy">

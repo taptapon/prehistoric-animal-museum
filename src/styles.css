@@ -891,6 +891,23 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.entry-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 4px;
+  padding-left: 8px;
+  border-left: 1px solid rgb(53 104 89 / 22%);
+  color: var(--animal-accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.entry-badge svg {
+  flex: 0 0 auto;
+}
+
 .title-lockup {
   position: relative;
   min-width: 0;
@@ -2766,6 +2783,11 @@ html[data-model-preview-capture] .viewer-host::after {
   }
 
   .review-mode-label {
+    padding-left: 6px;
+    font-size: 0.58rem;
+  }
+
+  .entry-badge {
     padding-left: 6px;
     font-size: 0.58rem;
   }

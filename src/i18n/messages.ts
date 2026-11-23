@@ -19,6 +19,11 @@ const zhCN = {
   creatorAboutLabel: '了解Leon做了个和这座博物馆',
   todayMeet: '今天认识',
   localReview: '本地评审',
+  entryBadge: {
+    label: '网络入口',
+    lan: '内网直连',
+    cloud: '公网访问',
+  },
   documentTitle: '史前动物博物馆 | 给 2–6 岁孩子的免费 3D 恐龙与古生物网站',
   seo: {
     description: (count: number) =>
@@ -226,6 +231,11 @@ const en = {
   creatorAboutLabel: 'About Leon Made This and this museum',
   todayMeet: 'Meet today’s friend',
   localReview: 'Local review',
+  entryBadge: {
+    label: 'Network entry',
+    lan: 'LAN direct',
+    cloud: 'Public network',
+  },
   documentTitle: 'Prehistoric Animal Museum for Kids | Free Interactive 3D Exhibits',
   seo: {
     description: (count) =>
