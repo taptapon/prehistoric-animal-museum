@@ -18,7 +18,7 @@
 
 ## 内网直连入口（Caddy，2026-11-23 加；同域名双路，在家快出门照旧）
 
-与 kidslearn / stock 共用同一台 Caddy（root 域 LaunchDaemon `com.jianghong.caddy`，:443，装机与坑见 kidslearn 仓 `docs/deploy-mach.md`「内网直连入口」节），本节只登记 museum 自己那一块。
+与 kidslearn / stock 共用同一台 Caddy（机器层基建：本体 / 证书 / 路由器 hosts 管理规约唯一登记 = mac-h `MACHINE.md`「内网直连入口」节），本节只登记 museum 自己那一块。
 
 ```
 在家：museum.jasonteam.top →（路由器 DNS）→ 192.168.31.172:443 Caddy → 127.0.0.1:8790
