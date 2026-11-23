@@ -16,6 +16,21 @@
 - 隧道凭据：`~/.cloudflared/f57ffbdf-3662-4f2d-92ac-23838d3d53d0.json`（含密钥勿外泄）
 - 门禁：Cloudflare Access（Zero Trust 控制台配置，本机零密钥）；2026-11-23 实测已生效——匿名访问 302 → `fragrant-tree-1237.cloudflareaccess.com` 登录页
 
+## 内网直连入口（Caddy，2026-11-23 加；同域名双路，在家快出门照旧）
+
+与 kidslearn / stock 共用同一台 Caddy（root 域 LaunchDaemon `com.jianghong.caddy`，:443，装机与坑见 kidslearn 仓 `docs/deploy-mach.md`「内网直连入口」节），本节只登记 museum 自己那一块。
+
+```
+在家：museum.jasonteam.top →（路由器 DNS）→ 192.168.31.172:443 Caddy → 127.0.0.1:8790
+出门：museum.jasonteam.top → CF 边缘 → cloudflared 隧道 → 127.0.0.1:8790
+```
+
+- **Caddyfile 第四站点块**：`~/etc/caddy/Caddyfile` 里 `museum.jasonteam.top`（bind 192.168.31.172，DNS-01 证书独立签发，reverse_proxy 127.0.0.1:8790，`header_up X-Entry-Via lan`）。2026-11-23 实测：证书 LE（至 2027-02-20）、首页 200 ~32ms。
+- **内网路无 Access 门禁**（同 stock 口径：家庭 WiFi 可信，在家省 OTP）；出门走 CF 隧道照旧 OTP。
+- **路由器侧**：小米路由自定义 hosts 增第三行 `192.168.31.172 museum.jasonteam.top`（精确匹配，必须写完整子域；该路由重启有丢配置前科，动/重启后与静态绑定一并复核）。
+- **验证**：`curl --resolve museum.jasonteam.top:443:192.168.31.172 https://museum.jasonteam.top/` → 200。
+- **回滚（仅内网入口下线）**：删 `~/etc/caddy/Caddyfile` 的 museum 块 + `sudo launchctl kickstart -k system/com.jianghong.caddy`（改前备份 `~/etc/caddy/Caddyfile.bak-20261123-museum`）；可选删路由器 hosts 行。公网隧道入口完全独立，不受影响。
+
 ## LaunchAgent（`~/Library/LaunchAgents/`，均 KeepAlive ThrottleInterval=10）
 
 | Label | 进程 | 日志 |
