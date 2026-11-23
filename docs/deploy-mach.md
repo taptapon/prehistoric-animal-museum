@@ -14,7 +14,7 @@
 
 - 隧道配置：`~/.cloudflared/museum.yml`（ingress museum.jasonteam.top → 127.0.0.1:8790，兜底 404）
 - 隧道凭据：`~/.cloudflared/f57ffbdf-3662-4f2d-92ac-23838d3d53d0.json`（含密钥勿外泄）
-- 门禁：Cloudflare Access（Zero Trust 控制台配置，本机零密钥）；**Access 应用配置完成前，站点对公网裸奔**
+- 门禁：Cloudflare Access（Zero Trust 控制台配置，本机零密钥）；2026-11-23 实测已生效——匿名访问 302 → `fragrant-tree-1237.cloudflareaccess.com` 登录页
 
 ## LaunchAgent（`~/Library/LaunchAgents/`，均 KeepAlive ThrottleInterval=10）
 
