@@ -325,3 +325,14 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
 - **旁白**：en 首轮 19.1s 超上限 fail，缩 3 词重生成 17.1s 过；zh 一次过 16.4s。
 - **全程约 1 小时**，与剑齿虎持平（§10 基线生效）。
 
+
+### 12.2 案例追加：tiger + rabbit（2026-11-27，双现生批量 + rig 拆除先例）
+
+- **双动物批量**：一次流水线进两只（虎 + 兔），共用检索/模板/验证链；commit 单提交。全程约 1.5 小时（含 TTS 双动物 8 段生成与两轮朝向修正），符合 §10 基线。
+- **带 rig 模型的坑（tiger 案新增，最重要）**：带骨骼动画的 Sketchfab 模型导入 Blender 即处于**某个源动画的第 0 帧姿态**——本例 tiger 导入即被 `Armature|Trick`（翻滚动作）摆成躺倒，机器门（land-contact-shadow 等）不拦这种 roll，只有截图目检能发现。修法：归一化前删 armature + ARMATURE 修饰器 + 全部 actions，导出净网格 GLB 作归一化输入（破坏性替换，provenance/model-source 双记录）。**归一化机器门全绿 ≠ 姿态正确，五角度渲染必须目检。**
+- **工具 profile 字面量门**：`animationStrategy.sourceArmature` / `sourceAnimation` 只接受 `present` / `absent`；`inputPath` 必须 == `source.sourceModelPath`——对源做 Blender 预处理（删个体/拆 rig）时，把派生件记为 sourceModelPath，原始下载件的 bytes/sha256 留在证据链（model-source.txt + recon 目录），qa 的 rights-and-direct-source 照样过。
+- **head-side gate 与视觉约定**：gate 只查 yaw 投影后 head/tail 的屏幕 x 顺序，`initialHeadSide` 可 left 可 right——虎 -35°（头左）配 `right`、兔 145°（脸朝观众偏右）配 `left` 均绿。别硬套上一只的 yaw，逐模型截图实证。
+- **源材质默认值**：两个模型均自带显式 metallic 0.0（作者保存时已设置），未触发河马案黑剪影坑；但每模型仍须先查 GLB JSON chunk 再下结论。
+- **TTS 批量**：一次 driver 跑两只 × 双语 8 段（model load 一次），单段失败注释其余只重跑失败段（driver 留在 tiger-recon）。tiger en 首轮 18.8s 超门，缩词至 15.5s。
+- **vite dev 热载陷阱**：改 package.ts 的 presentation 后 dev server 不热载——截图前重启（`NODE_OPTIONS=--import tsx npm run dev`，见本仓 dev server 基线问题；本条已同步 agent 记忆）。
+- **token 复用**：owner token 在既往会话记录中可检索（本例经用户明确指示找回，账号 RawFox8864）；用完删临时副本并提醒 owner 重置。
