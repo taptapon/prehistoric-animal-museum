@@ -1,0 +1,25 @@
+Derived image record
+====================
+
+Posters and thumbnail were captured on 2026-11-27 from the local dev build
+of the accepted runtime presentation (Vite dev server, headless Chrome with
+software WebGL at 1440x900 desktop and 390x844@2x phone), with the accepted
+model and Idle at its rest pose over the reused baryonyx wet-woodland
+backgrounds. Interface chrome (story panel, animal rail, header, gesture
+hint) was hidden before capture; no animal, text or logo was added.
+
+Derivations:
+- images/poster.webp: centre-cropped 16:9 from the desktop capture (1440x810
+  crop, y offset 45), Lanczos scaled to the museum-standard 1200x675, WebP
+  quality 80 effort 6. Bytes 207160, SHA-256
+  2879cbfa8010517d7ad7305a9a1a46d05d076d9b23d6d5604af60e6768b444b7
+- images/poster-portrait.webp: the full 390:844 phone capture, Lanczos
+  scaled to the museum-standard 390x844, WebP quality 80 effort 6. Bytes
+  88034, SHA-256
+  1d027d3702fa2b59a1c1f3522cdbc0f993427b49ce70f92180e455a61e8b6f1f
+- images/thumbnail.webp: square centre crop (900x900) around the animal from
+  the desktop capture, Lanczos scaled to 640x640, WebP quality 80 effort 6.
+  Bytes 97854, SHA-256
+  5dc2f26d11a5727fc8b3fff533a22421d359d006e71c7f7b2cd84e0f5254489f
+
+The same model, pose direction and scene are shown in all three derivatives.

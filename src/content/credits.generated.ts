@@ -4021,6 +4021,128 @@ export const credits = [
     ]
   },
   {
+    "id": "rabbit:audio/narration.en.mp3",
+    "animalId": "rabbit",
+    "assetPath": "audio/narration.en.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "Rabbit English narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed English two-sentence script with the Serena voice.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "rabbit:audio/narration.zh-CN.mp3",
+    "animalId": "rabbit",
+    "assetPath": "audio/narration.zh-CN.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "兔子 Mandarin narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed two-sentence script.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "rabbit:backgrounds/landscape.webp",
+    "animalId": "rabbit",
+    "assetPath": "backgrounds/landscape.webp",
+    "assetKind": "background",
+    "sourceTitle": "Maiasaura Late Cretaceous floodplain — landscape",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 兔子 landscape created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored maiasaura woodland-clearing background without modification; its golden grass clearing matches the rabbit's meadow-edge life, and the parent-facing note records the scene as an artistic setting."
+    ]
+  },
+  {
+    "id": "rabbit:backgrounds/portrait.webp",
+    "animalId": "rabbit",
+    "assetPath": "backgrounds/portrait.webp",
+    "assetKind": "background",
+    "sourceTitle": "Maiasaura Late Cretaceous floodplain — portrait",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 兔子 portrait created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored maiasaura portrait background without modification."
+    ]
+  },
+  {
+    "id": "rabbit:images/poster-portrait.webp",
+    "animalId": "rabbit",
+    "assetPath": "images/poster-portrait.webp",
+    "assetKind": "poster",
+    "sourceTitle": "兔子 transparent portrait model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "rabbit:images/poster.webp",
+    "animalId": "rabbit",
+    "assetPath": "images/poster.webp",
+    "assetKind": "poster",
+    "sourceTitle": "兔子 transparent model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "rabbit:images/thumbnail.webp",
+    "animalId": "rabbit",
+    "assetPath": "images/thumbnail.webp",
+    "assetKind": "thumbnail",
+    "sourceTitle": "兔子 collection thumbnail",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.",
+    "modifications": [
+      "Resized and centred the complete silhouette with animal-specific safe margins.",
+      "Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "rabbit:model/model.glb",
+    "animalId": "rabbit",
+    "assetPath": "model/model.glb",
+    "assetKind": "model",
+    "sourceTitle": "Cute Bunny",
+    "author": "minimoku (Sketchfab user minimoku)",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://sketchfab.com/3d-models/cute-bunny-7d30845d69c4474ebeddd177df6b7f02",
+    "attribution": "“Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.",
+      "The source scene holds two cartoon rabbit individuals; the white individual was removed destructively in Blender (2026-11-27) so the exhibit presents a single animal, and the removal is recorded here and in the normalization evidence.",
+      "Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.",
+      "Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and ear sway, no root translation.",
+      "The exhibit presents the living European rabbit (ancestor of all domestic rabbits) under the owner-approved 2026-11-23 collection expansion; the stylised cartoon finish is recorded in the parent-facing notes."
+    ]
+  },
+  {
     "id": "regaliceratops:audio/narration.en.mp3",
     "animalId": "regaliceratops",
     "assetPath": "audio/narration.en.mp3",
@@ -5218,6 +5340,127 @@ export const credits = [
     "attribution": "Model by Julian Johnson-Mortimer (https://sketchfab.com/FreddyFoxFreddy); museum preparation by Leon Made This.",
     "modifications": [
       "adult-only connected component cleanup; selective decimation preserving head and claws; original alpha feather cards removed; compact opaque textured feathers rebuilt; skin textures resized and gently brightened/desaturated; roughness adjusted; 15-bone custom deformation rig; true stationary eight-second Idle; museum coordinate and scale normalization"
+    ]
+  },
+  {
+    "id": "tiger:audio/narration.en.mp3",
+    "animalId": "tiger",
+    "assetPath": "audio/narration.en.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "Tiger English narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed English two-sentence script with the Serena voice.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "tiger:audio/narration.zh-CN.mp3",
+    "animalId": "tiger",
+    "assetPath": "audio/narration.zh-CN.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "老虎 Mandarin narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed two-sentence script.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "tiger:backgrounds/landscape.webp",
+    "animalId": "tiger",
+    "assetPath": "backgrounds/landscape.webp",
+    "assetKind": "background",
+    "sourceTitle": "Baryonyx Wealden wet-woodland habitat — landscape",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 老虎 landscape created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored baryonyx riverside-jungle background without modification; its fern forest and water pools match the tiger's forest life, and the parent-facing note records the scene as an artistic setting."
+    ]
+  },
+  {
+    "id": "tiger:backgrounds/portrait.webp",
+    "animalId": "tiger",
+    "assetPath": "backgrounds/portrait.webp",
+    "assetKind": "background",
+    "sourceTitle": "Baryonyx Wealden wet-woodland habitat — portrait",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 老虎 portrait created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored baryonyx portrait background without modification."
+    ]
+  },
+  {
+    "id": "tiger:images/poster-portrait.webp",
+    "animalId": "tiger",
+    "assetPath": "images/poster-portrait.webp",
+    "assetKind": "poster",
+    "sourceTitle": "老虎 transparent portrait model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "tiger:images/poster.webp",
+    "animalId": "tiger",
+    "assetPath": "images/poster.webp",
+    "assetKind": "poster",
+    "sourceTitle": "老虎 transparent model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "tiger:images/thumbnail.webp",
+    "animalId": "tiger",
+    "assetPath": "images/thumbnail.webp",
+    "assetKind": "thumbnail",
+    "sourceTitle": "老虎 collection thumbnail",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.",
+    "modifications": [
+      "Resized and centred the complete silhouette with animal-specific safe margins.",
+      "Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "tiger:model/model.glb",
+    "animalId": "tiger",
+    "assetPath": "model/model.glb",
+    "assetKind": "model",
+    "sourceTitle": "Stylized Bengal Tiger with 4 animations",
+    "author": "jungle_jim (Sketchfab user jungle_jim)",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://sketchfab.com/3d-models/stylized-bengal-tiger-with-4-animations-d87e750f18aa416dbccdd5ca7b81f751",
+    "attribution": "“Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.",
+      "Stripped the shipped 48-node rig, its four self-described crude animations and the armature modifiers destructively in Blender before normalization: the imported rest frame was posed by the \"Armature|Trick\" animation (a roll-over pose), and the museum presents the mesh in its bind pose instead; the project-authored motion replaces all source animation (recorded destructive replacement).",
+      "Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.",
+      "The exhibit presents the living tiger under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing and the stylised cartoon finish."
     ]
   },
   {

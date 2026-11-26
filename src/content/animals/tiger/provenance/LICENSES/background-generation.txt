@@ -1,0 +1,24 @@
+Background generation record
+============================
+
+No new background art was generated for the tiger exhibit. Following the
+project owner's standing decision (first recorded 2026-11-22 for the dire
+wolf), the exhibit reuses the already-reviewed, project-authored baryonyx
+Wealden wet-woodland backgrounds instead of generating new images. This is
+the first reuse of the baryonyx scene; the reuse lineage is registered in
+src/content/provenance-helpers.ts (reviewedBackgroundSources.baryonyx).
+
+Source compositions: the baryonyx exhibit landscape and portrait
+backgrounds, whose original image-generation record is retained in
+src/content/animals/baryonyx/provenance/LICENSES/background-generation.txt
+(generated 2026-08-29).
+
+Reused runtime files, copied without modification:
+- landscape: bytes 854516, SHA-256 1b5ebdeff9a75fae21d0fe3c43102b0d5a73849add10b95b997567c0a49aa2a4
+- portrait:  bytes 728982, SHA-256 e9d80b3bfe9aefc2ea93c2d3e2f909079e2ba1b25f1efee7cc1cf31f63a0ca85
+
+Both images exclude animals, people, text, interface elements, logos and
+watermarks, and keep the central placement area quiet for the museum model.
+The tiger's forest life matches the reused wet-woodland river scene; the
+parent-facing note records the scene as an artistic setting with Mesozoic
+plants rather than a realistic Asian tiger habitat reconstruction.

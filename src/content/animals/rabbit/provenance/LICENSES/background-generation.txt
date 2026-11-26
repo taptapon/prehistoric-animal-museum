@@ -1,0 +1,23 @@
+Background generation record
+============================
+
+No new background art was generated for the rabbit exhibit. Following the
+project owner's standing decision (first recorded 2026-11-22 for the dire
+wolf), the exhibit reuses the already-reviewed, project-authored maiasaura
+woodland-clearing backgrounds instead of generating new images. The reuse
+lineage is registered in src/content/provenance-helpers.ts
+(reviewedBackgroundSources.maiasaura).
+
+Source compositions: the maiasaura exhibit landscape and portrait
+backgrounds, whose original image-generation record is retained in
+src/content/animals/maiasaura/provenance/LICENSES/background-generation.txt.
+
+Reused runtime files, copied without modification:
+- landscape: bytes 336442, SHA-256 57da28e0040da8a8dcc53779a1fa1d43f68a76930ef75cdb6ea57a07b013b4d3
+- portrait:  bytes 265958, SHA-256 d615b288525fc0d144b5a3a0bb17a17439fa81f68323861e9378fd206105fd58
+
+Both images exclude animals, people, text, interface elements, logos and
+watermarks, and keep the central placement area quiet for the museum model.
+The rabbit's meadow-edge life matches the reused golden grass clearing; the
+parent-facing note records the scene as an artistic setting with Mesozoic
+plants rather than a realistic rabbit habitat reconstruction.

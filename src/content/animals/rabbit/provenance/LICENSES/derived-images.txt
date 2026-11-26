@@ -1,0 +1,25 @@
+Derived image record
+====================
+
+Posters and thumbnail were captured on 2026-11-27 from the local dev build
+of the accepted runtime presentation (Vite dev server, headless Chrome with
+software WebGL at 1440x900 desktop and 390x844@2x phone), with the accepted
+model and Idle at its rest pose over the reused maiasaura woodland-clearing
+backgrounds. Interface chrome (story panel, animal rail, header, gesture
+hint) was hidden before capture; no animal, text or logo was added.
+
+Derivations:
+- images/poster.webp: centre-cropped 16:9 from the desktop capture (1440x810
+  crop, y offset 45), Lanczos scaled to the museum-standard 1200x675, WebP
+  quality 80 effort 6. Bytes 139342, SHA-256
+  b58e165f9ffbe240c6c0a1fab96472b09942bc89a5d6e1d6166fee52c767971b
+- images/poster-portrait.webp: the full 390:844 phone capture, Lanczos
+  scaled to the museum-standard 390x844, WebP quality 80 effort 6. Bytes
+  49918, SHA-256
+  e19e8c0c9118ae9e717300130f113203d13779ba9953dbd74af99a68cc8322ac
+- images/thumbnail.webp: square centre crop (900x900) around the animal from
+  the desktop capture, Lanczos scaled to 640x640, WebP quality 80 effort 6.
+  Bytes 59562, SHA-256
+  486221adab0e1cd97a06239a3e6eedb81bfaf1d6f9537139dfd65a2aae722590
+
+The same model, pose direction and scene are shown in all three derivatives.

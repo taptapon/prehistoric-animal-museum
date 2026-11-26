@@ -9,11 +9,11 @@
     },
     "zh-CN": {
       "fileName": "museum.zh-CN.png",
-      "sourceSha256": "feac9e2cd04f16903fe417a15d1fa23ef478c0bb39eb724d22f9fc1a18daf413"
+      "sourceSha256": "1432aad0df48ddd4fb834a08ef94267ea45978af576d4dd3a43968ba39bd7cfd"
     },
     "en": {
       "fileName": "museum.en.png",
-      "sourceSha256": "359ae595bb199c3e3935a3c64f7d4dfd3551e1ca3bf19d8f13e2f61ea28622d3"
+      "sourceSha256": "b76d210c5ba398dd4e3d84451b5c91374e04b797f7ec1e3f84f99f9b9f05916e"
     }
   }
 }

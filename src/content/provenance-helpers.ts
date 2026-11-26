@@ -54,6 +54,24 @@ export const reviewedBackgroundSources = {
         '79a3135c86652a7278ceafc719c05b334e5b2966f8c9dc73860b38f11fbe642d',
     },
   },
+  baryonyx: {
+    landscape: {
+      title: 'Baryonyx Wealden wet-woodland habitat — landscape',
+      generatedOn: '2026-08-29',
+      prompt: `Bright, welcoming Early Cretaceous Wealden wet-woodland museum background with crisp river mud, puddles, stones, ferns, cycads, bark, rippled water and conifer branches; deep focus, quiet central model area, no animal, people, text, logo or watermark.`,
+      bytes: 3_310_099,
+      sha256:
+        'cb3dbc754c11d4d155f769f17b8cfdfb80f96e5d4e3d06df9f9d115bb79870b3',
+    },
+    portrait: {
+      title: 'Baryonyx Wealden wet-woodland habitat — portrait',
+      generatedOn: '2026-08-29',
+      prompt: `Separately composed portrait companion of the bright Early Cretaceous Wealden wet woodland, with crisp river mud, puddles, stones, ferns, cycads, bark, water and conifers; quiet central model area, no animal, people, text, logo or watermark.`,
+      bytes: 2_988_055,
+      sha256:
+        '142615d2ee3cea2bf2f611767d5e73610b2a93275e90c6da6730330c10750894',
+    },
+  },
   gigantoraptor: {
     landscape: {
       title: 'Gigantoraptor Gobi alluvial plain — landscape',
@@ -253,6 +271,18 @@ export const reviewedBackgroundSources = {
 >
 
 export const reviewedEnglishNarrationArtifacts = {
+  tiger: {
+    generatedOn: '2026-11-27',
+    bytes: 156_044,
+    sha256:
+      '6b11832ec9a0c4eb63f3ab3066db1688ee94d566ac4f646bc75dd5e61a8b9bcd',
+  },
+  rabbit: {
+    generatedOn: '2026-11-27',
+    bytes: 170_684,
+    sha256:
+      '7601dd89289dc3ff0bfb36e6aa6c297c09b9382daf25e0531df1a5a7512d3424',
+  },
   hippopotamus: {
     generatedOn: '2026-11-23',
     bytes: 172_124,

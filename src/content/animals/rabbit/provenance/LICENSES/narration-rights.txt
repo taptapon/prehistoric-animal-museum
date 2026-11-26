@@ -1,0 +1,35 @@
+Narration rights and listening record
+=====================================
+
+Engine: Qwen3-TTS CustomVoice 0.6B, local offline generation
+Model: Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice
+Revision: 85e237c12c027371202489a0ec509ded67b5e4b5
+Speaker: Serena (built-in CustomVoice speaker)
+Generated on: 2026-11-27
+
+zh-CN
+language: Chinese
+script: 这是兔子，它的长耳朵会转来转去，能听到四面八方的声音，有危险靠近马上就知道。
+        兔子用有力的后腿蹦蹦跳跳，还和伙伴们一起住在地下挖好的洞穴家里。
+runtime: audio/narration.zh-CN.mp3
+bytes: 139484
+sha256: 92ee70048c52de2c5bb3d3ebe01b30c0917be6da6f68ce62dfea7a541a2ca4fc
+duration: 13.90 s, 48 kHz mono MP3, integrated loudness -18.42 LUFS
+
+en
+language: English
+script: This is the rabbit. Its long ears twist and turn to catch sounds from every direction, so it knows when danger is near.
+        With strong back legs the rabbit hops and hops, and it lives underground in big burrow homes with all its friends.
+runtime: audio/narration.en.mp3
+bytes: 170684
+sha256: 7601dd89289dc3ff0bfb36e6aa6c297c09b9382daf25e0531df1a5a7512d3424
+duration: 17.01 s, 48 kHz mono MP3, integrated loudness -18.44 LUFS
+
+Human listening review: approved (owner delegation, 2026-11-27)
+The project owner reviewed the generated artifacts and automatic acceptance
+metrics in the session record and explicitly delegated the confirmation to
+the assistant on 2026-11-27 ("其他帮我确认了就行"); the delegation is quoted
+here rather than a claim that the owner played the audio personally. All
+automatic checks passed for both complete candidates (duration, loudness,
+silence framing, codec). The scripts are human-reviewed; the audio is
+synthesized offline with AI.

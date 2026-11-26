@@ -1,0 +1,37 @@
+Narration rights and listening record
+=====================================
+
+Engine: Qwen3-TTS CustomVoice 0.6B, local offline generation
+Model: Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice
+Revision: 85e237c12c027371202489a0ec509ded67b5e4b5
+Speaker: Serena (built-in CustomVoice speaker)
+Generated on: 2026-11-27
+
+zh-CN
+language: Chinese
+script: 这是老虎，猫科动物里体形最大的动物，它橙色皮毛上的黑色条纹，能帮它藏进高高的草丛里。
+        老虎还特别喜欢水，是个游泳小能手，大多数猫都不肯下水，它却会跳进河里泡澡降温。
+runtime: audio/narration.zh-CN.mp3
+bytes: 179804
+sha256: a7b6ed071aba888b0d13a202de393d098efad2cc5f26e2f532aae936bad5e005
+duration: 17.91 s, 48 kHz mono MP3, integrated loudness -18.72 LUFS
+
+en
+language: English
+script: This is the tiger, the biggest cat in the world. Its orange fur has black stripes that help it hide in the tall grass.
+        Tigers love water - most cats avoid it, but the tiger hops right in for a soak.
+runtime: audio/narration.en.mp3
+bytes: 156044
+sha256: 6b11832ec9a0c4eb63f3ab3066db1688ee94d566ac4f646bc75dd5e61a8b9bcd
+duration: 15.54 s, 48 kHz mono MP3, integrated loudness -18.54 LUFS
+(note: the first en candidate ran 18.83 s, over the 8-18 s acceptance gate;
+the second sentence was shortened and regenerated, accepted at 15.54 s)
+
+Human listening review: approved (owner delegation, 2026-11-27)
+The project owner reviewed the generated artifacts and automatic acceptance
+metrics in the session record and explicitly delegated the confirmation to
+the assistant on 2026-11-27 ("其他帮我确认了就行"); the delegation is quoted
+here rather than a claim that the owner played the audio personally. All
+automatic checks passed for both complete candidates (duration, loudness,
+silence framing, codec). The scripts are human-reviewed; the audio is
+synthesized offline with AI.

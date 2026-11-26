@@ -1,0 +1,30 @@
+Model source record
+===================
+
+Title: Cute Bunny
+Author: minimoku (Sketchfab user minimoku)
+Page: https://sketchfab.com/3d-models/cute-bunny-7d30845d69c4474ebeddd177df6b7f02
+Accessed: 2026-11-27
+Download variant: Sketchfab "Autoconverted format" GLB
+Original file: rabbit-source.glb
+Bytes: 1165640
+SHA-256: b1c6fd8a3d08949a7eed2266a06c5ec54bd952e4ca83a3a37412aaf0f8f67276
+
+Pre-normalization processing (destructive, recorded): the source scene holds
+two cartoon rabbit individuals; the white individual was removed in Blender
+on 2026-11-27 producing rabbit-single.glb (553364 bytes), which is the
+normalization input recorded in the run profile. The removal is also listed
+in provenance.ts model modifications.
+
+Use: living rabbit carrier for the rabbit exhibit, added under the
+owner-approved 2026-11-23 living-species collection expansion. The exhibit is
+modelled on the European rabbit (Oryctolagus cuniculus), ancestor of all
+domestic rabbits; the stylised cartoon finish is an artistic presentation
+choice recorded in the parent-facing notes.
+
+Intake screening (4 Sketchfab query groups) is recorded with the full
+candidate table, licence filtering and rejection reasons in
+assets/candidates/rabbit-recon/INTAKE-EVIDENCE.md. Character IP (Sonic,
+Looney Tunes, FNaF, anime figures), NonCommercial, Sketchfab-Standard and
+specimen/taxidermy models were rejected; the selected candidate matches the
+stylised tiger exhibit for a consistent child-friendly collection expansion.

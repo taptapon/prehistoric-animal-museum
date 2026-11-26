@@ -1,0 +1,30 @@
+Model source record
+===================
+
+Title: Stylized Bengal Tiger with 4 animations
+Author: jungle_jim (Sketchfab user jungle_jim)
+Page: https://sketchfab.com/3d-models/stylized-bengal-tiger-with-4-animations-d87e750f18aa416dbccdd5ca7b81f751
+Accessed: 2026-11-27
+Download variant: Sketchfab "Autoconverted format" GLB
+Original file: tiger-source.glb
+Bytes: 3754964
+SHA-256: 931d8cafc078416989224ce9300e6579487b80b3aae137d8ee7256e136555807
+
+Pre-normalization processing (destructive, recorded): the source ships a
+48-node rig with four self-described crude animations; the imported rest
+frame was posed by the "Armature|Trick" animation (a roll-over pose), so the
+armature, its modifiers and all actions were stripped in Blender on
+2026-11-27 producing tiger-rest.glb (2789016 bytes, mesh-only bind pose),
+which is the normalization input recorded in the run profile.
+
+Use: live modern tiger carrier for the tiger exhibit, added under the
+owner-approved 2026-11-23 living-species collection expansion. The model
+presents the living tiger (Panthera tigris); the stylised cartoon finish is
+an artistic presentation choice recorded in the parent-facing notes.
+
+Intake screening (4 Sketchfab query groups) is recorded with the full
+candidate table, licence filtering and rejection reasons in
+assets/candidates/tiger-recon/INTAKE-EVIDENCE.md. White-tiger colour-variant
+and untextured grey candidates were rejected in favour of the selected
+child-friendly stylised Bengal tiger; oversized (over the 250k-triangle
+absolute cap), NonCommercial and specimen models were excluded.

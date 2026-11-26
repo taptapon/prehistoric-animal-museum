@@ -2766,6 +2766,89 @@ content, contributions, and Brand Assets follow the separate scopes in
   - 2026-10-30: adapted actual Pteranodon clavicle/upper-arm/forearm/wrist/wingfinger gesture through anatomical basis retargeting, with a longer complete beat than its authored0.7 App speed, a compact powerstroke and longer recovery followed by long glide; fixedRoot and original37-bone mesh/materials/initial pose retained; bounded proximal membrane field repaired with inverse-skin compensation.
   - True humerus posture compensation addresses Quetz versus reference initial elevation during active beat, returning exactly to original initial pose. Distributed power response and recovery/settling through neck-base,mid-neck,upper-neck,skull with a small glide glance. Original verified13-degree jaw local curves retained exactly.
   - Adapted flight rotations from Pteranodon (Animated) by Chistodrako._. / Oscar López Riviello, CC BY 4.0, https://sketchfab.com/3d-models/pteranodon-animated-7d7683df41d1405283f160e81a5dff1b; no reference mesh, textures or rig copied.
+## 兔子 (`rabbit`)
+
+### `audio/narration.en.mp3`
+
+- Asset type: narration
+- Source: Rabbit English narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `7601dd89289dc3ff0bfb36e6aa6c297c09b9382daf25e0531df1a5a7512d3424`
+- Modifications:
+  - Generated offline from the exact reviewed English two-sentence script with the Serena voice.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `audio/narration.zh-CN.mp3`
+
+- Asset type: narration
+- Source: 兔子 Mandarin narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `92ee70048c52de2c5bb3d3ebe01b30c0917be6da6f68ce62dfea7a541a2ca4fc`
+- Modifications:
+  - Generated offline from the exact reviewed two-sentence script.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `backgrounds/landscape.webp`
+
+- Asset type: background
+- Source: Maiasaura Late Cretaceous floodplain — landscape, generated with OpenAI built-in image_gen on 2026-07-30
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 兔子 landscape created with OpenAI ImageGen.
+- Runtime SHA-256: `57da28e0040da8a8dcc53779a1fa1d43f68a76930ef75cdb6ea57a07b013b4d3`
+- Modifications:
+  - Reused the already-reviewed project-authored maiasaura woodland-clearing background without modification; its golden grass clearing matches the rabbit's meadow-edge life, and the parent-facing note records the scene as an artistic setting.
+### `backgrounds/portrait.webp`
+
+- Asset type: background
+- Source: Maiasaura Late Cretaceous floodplain — portrait, generated with OpenAI built-in image_gen on 2026-07-30
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 兔子 portrait created with OpenAI ImageGen.
+- Runtime SHA-256: `d615b288525fc0d144b5a3a0bb17a17439fa81f68323861e9378fd206105fd58`
+- Modifications:
+  - Reused the already-reviewed project-authored maiasaura portrait background without modification.
+### `images/poster-portrait.webp`
+
+- Asset type: poster
+- Source: 兔子 transparent portrait model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `e19e8c0c9118ae9e717300130f113203d13779ba9953dbd74af99a68cc8322ac`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/poster.webp`
+
+- Asset type: poster
+- Source: 兔子 transparent model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `b58e165f9ffbe240c6c0a1fab96472b09942bc89a5d6e1d6166fee52c767971b`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/thumbnail.webp`
+
+- Asset type: thumbnail
+- Source: 兔子 collection thumbnail, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.
+- Runtime SHA-256: `486221adab0e1cd97a06239a3e6eedb81bfaf1d6f9537139dfd65a2aae722590`
+- Modifications:
+  - Resized and centred the complete silhouette with animal-specific safe margins.
+  - Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks.
+### `model/model.glb`
+
+- Asset type: model
+- Source: [Cute Bunny](https://sketchfab.com/3d-models/cute-bunny-7d30845d69c4474ebeddd177df6b7f02) by minimoku (Sketchfab user minimoku)
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Cute Bunny” by minimoku (Sketchfab user minimoku), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `d5325004642ad5670acd023ace1f9d6fb68f3ada727b186b6d518549c6388566`
+- Modifications:
+  - Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.
+  - The source scene holds two cartoon rabbit individuals; the white individual was removed destructively in Blender (2026-11-27) so the exhibit presents a single animal, and the removal is recorded here and in the normalization evidence.
+  - Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.
+  - Authored a deterministic project Idle (land-breathe-tail morph): eight-second closed loop with gentle breathing and ear sway, no root translation.
+  - The exhibit presents the living European rabbit (ancestor of all domestic rabbits) under the owner-approved 2026-11-23 collection expansion; the stylised cartoon finish is recorded in the parent-facing notes.
 ## 帝王角龙 (`regaliceratops`)
 
 ### `audio/narration.en.mp3`
@@ -3576,6 +3659,88 @@ content, contributions, and Brand Assets follow the separate scopes in
 - Runtime SHA-256: `9311e4108c29cfc9f5efe78ea4335a7a6a247a96a068a8559ae25facf13af440`
 - Modifications:
   - adult-only connected component cleanup; selective decimation preserving head and claws; original alpha feather cards removed; compact opaque textured feathers rebuilt; skin textures resized and gently brightened/desaturated; roughness adjusted; 15-bone custom deformation rig; true stationary eight-second Idle; museum coordinate and scale normalization
+## 老虎 (`tiger`)
+
+### `audio/narration.en.mp3`
+
+- Asset type: narration
+- Source: Tiger English narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `6b11832ec9a0c4eb63f3ab3066db1688ee94d566ac4f646bc75dd5e61a8b9bcd`
+- Modifications:
+  - Generated offline from the exact reviewed English two-sentence script with the Serena voice.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `audio/narration.zh-CN.mp3`
+
+- Asset type: narration
+- Source: 老虎 Mandarin narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `a7b6ed071aba888b0d13a202de393d098efad2cc5f26e2f532aae936bad5e005`
+- Modifications:
+  - Generated offline from the exact reviewed two-sentence script.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `backgrounds/landscape.webp`
+
+- Asset type: background
+- Source: Baryonyx Wealden wet-woodland habitat — landscape, generated with OpenAI built-in image_gen on 2026-08-29
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 老虎 landscape created with OpenAI ImageGen.
+- Runtime SHA-256: `1b5ebdeff9a75fae21d0fe3c43102b0d5a73849add10b95b997567c0a49aa2a4`
+- Modifications:
+  - Reused the already-reviewed project-authored baryonyx riverside-jungle background without modification; its fern forest and water pools match the tiger's forest life, and the parent-facing note records the scene as an artistic setting.
+### `backgrounds/portrait.webp`
+
+- Asset type: background
+- Source: Baryonyx Wealden wet-woodland habitat — portrait, generated with OpenAI built-in image_gen on 2026-08-29
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 老虎 portrait created with OpenAI ImageGen.
+- Runtime SHA-256: `e9d80b3bfe9aefc2ea93c2d3e2f909079e2ba1b25f1efee7cc1cf31f63a0ca85`
+- Modifications:
+  - Reused the already-reviewed project-authored baryonyx portrait background without modification.
+### `images/poster-portrait.webp`
+
+- Asset type: poster
+- Source: 老虎 transparent portrait model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `1d027d3702fa2b59a1c1f3522cdbc0f993427b49ce70f92180e455a61e8b6f1f`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/poster.webp`
+
+- Asset type: poster
+- Source: 老虎 transparent model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `2879cbfa8010517d7ad7305a9a1a46d05d076d9b23d6d5604af60e6768b444b7`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/thumbnail.webp`
+
+- Asset type: thumbnail
+- Source: 老虎 collection thumbnail, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.
+- Runtime SHA-256: `5dc2f26d11a5727fc8b3fff533a22421d359d006e71c7f7b2cd84e0f5254489f`
+- Modifications:
+  - Resized and centred the complete silhouette with animal-specific safe margins.
+  - Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks.
+### `model/model.glb`
+
+- Asset type: model
+- Source: [Stylized Bengal Tiger with 4 animations](https://sketchfab.com/3d-models/stylized-bengal-tiger-with-4-animations-d87e750f18aa416dbccdd5ca7b81f751) by jungle_jim (Sketchfab user jungle_jim)
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Stylized Bengal Tiger with 4 animations” by jungle_jim (Sketchfab user jungle_jim), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `669bb09ed6a2f059537272108d4b401ce46b1666febad7fae2055374e1b6fb10`
+- Modifications:
+  - Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.
+  - Stripped the shipped 48-node rig, its four self-described crude animations and the armature modifiers destructively in Blender before normalization: the imported rest frame was posed by the "Armature|Trick" animation (a roll-over pose), and the museum presents the mesh in its bind pose instead; the project-authored motion replaces all source animation (recorded destructive replacement).
+  - Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.
+  - The exhibit presents the living tiger under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing and the stylised cartoon finish.
 ## 三角龙 (`triceratops`)
 
 ### `audio/narration.en.mp3`
