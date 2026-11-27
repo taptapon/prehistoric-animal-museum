@@ -345,6 +345,20 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
 - **vite dev 热载陷阱**：改 package.ts 的 presentation 后 dev server 不热载——截图前重启（`NODE_OPTIONS=--import tsx npm run dev`，详见 §13；本条已同步 agent 记忆）。
 - **token 复用**：owner token 已落权威文件 `~/.config/sketchfab/token`（2026-11-27 起，见 §11.3），后续会话直接读该文件，不再扫会话转录找回；用完删临时副本。
 
+### 12.3 案例追加：boa-constrictor（2026-11-27，首只蛇 + §11.0 新标准首单 + 减面预处理先例）
+
+- **背景**：用户同日裁定 §11.0（只收写实、古生物优先、现生兜底）并点名「下一个做一只蛇」。史前蛇侧 15 组检索词穷尽即灭（游戏衍生 ARK/Prehistoric Kingdom/JWA、Dino Raul NC 原件 + 顶点数吻合的 CC BY 洗白转载件、化石标本、浮雕板、无贴图灰模、卡通件），按标准转现代蛇。检索证据全表：`assets/candidates/snake-recon/INTAKE-EVIDENCE.md`。
+- **模型**：franciscomedina77「Boa Constrictor Hispaniola」CC BY 4.0（真实蚺蛇照片测量扫描，盘绕休憩姿态、闭嘴平和、无毒物种对儿童内容友好）。Blender 中性渲染对比三强候选（CC0 日本蝮蛇大/小版落选：直线姿态呆板 + unlit 材质 + 大版超预算 2.3×；Hispaniola 蚺材质已是显式 PBR metallic 0.279/roughness 0.472）。
+- **减面预处理（tiger 案 rig-strip 的姊妹先例）**：photogrammetry 扫描件 249,913 顶点 ≈ 50 万三角超预算，Blender Decimate 统一塌缩 0.2001 → 99,995 面，派生件记 sourceModelPath、原件 bytes/sha256 留证据链——qa `rights-and-direct-source` 照样过。**Blender 5.3 API 变更**：`DecimateModifier` 已无 `use_collapse_boundaries` 属性（有 `use_dissolve_boundaries`），照旧脚本写会 AttributeError。
+- **GLB 实检三件套**：仓内一次性 inspect 脚本（accessor min/max 直接读包围盒、材质 metallic/roughness 默认值、skins/animations 清点）+ dump 内嵌贴图 + Blender 无头中性渲染——三步下载后先做，别急着进管线。
+- **下载通路注意**：2026-11-27 实测 Clash 对 `sketchfab-prod-media.s3.amazonaws.com` 的 TLS 握手被 RST（exit 35），**直连反而成功**——§11.3 的「必须走代理」不是铁律，先试直连再切代理，反之亦然。
+- **轴向实证**：glTF accessor bbox Y 跨度最长但导入 Blender 后长度落 Y、高度落 Z（每模型必须重测）；head landmark x=-1.6（-X 端）→ yaw -35 + headSide left 一次过 `initial-head-side` 门。
+- **motion profile 选型**：盘绕蛇用 `static-breathe`（纯呼吸起伏）——`land-breathe-tail` 的尾侧扫会让盘身整圈扭曲，勿用。
+- **背景**：第三次复用 baryonyx 湿地丛林（原审 → tiger → boa），拷贝字节一致，provenance 引 `reviewedBackgroundSources.baryonyx`；时代错配（中生代植被 vs 现生蛇）家长面注明。
+- **内容口径**：来源页防软 404 实测——Britannica 是 Cloudflare 壳弃用，用 ADW + Wikipedia；伊斯帕尼奥拉种群现状无权威页可核 → 只进 uncertaintyNotes 不进事实层；缠绕机制按现行研究写「阻断血液循环」非「憋死」。
+- **TTS**：两语一次过自动门（zh 15.58s / en 14.13s），全程约 6 分钟；听审走 tiger 案委托先例（owner 在结构化提问中回「委托你确认」，narration-rights.txt 引用原话记录）。
+- **全程约 1.5 小时**（含定标准、15 组史前检索、三候选下载对比、减面、截图派生、双语内容、TTS、全链验证），符合 §10 基线。
+
 ## 13. dev server 基线问题（本机实测，2026-11-27）
 
 `npm run dev` 在 vite 8 下开箱即挂（与新增动物无关）的根因与修法，所有要起 dev server / 截图的 agent 先读本节：
