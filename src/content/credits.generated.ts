@@ -970,6 +970,128 @@ export const credits = [
     ]
   },
   {
+    "id": "boa-constrictor:audio/narration.en.mp3",
+    "animalId": "boa-constrictor",
+    "assetPath": "audio/narration.en.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "Boa constrictor English narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed English two-sentence script with the Serena voice.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "boa-constrictor:audio/narration.zh-CN.mp3",
+    "animalId": "boa-constrictor",
+    "assetPath": "audio/narration.zh-CN.mp3",
+    "assetKind": "narration",
+    "sourceTitle": "蚺蛇 Mandarin narration",
+    "author": "Qwen3-TTS CustomVoice",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned Qwen3-TTS output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).",
+    "modifications": [
+      "Generated offline from the exact reviewed two-sentence script.",
+      "Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis."
+    ]
+  },
+  {
+    "id": "boa-constrictor:backgrounds/landscape.webp",
+    "animalId": "boa-constrictor",
+    "assetPath": "backgrounds/landscape.webp",
+    "assetKind": "background",
+    "sourceTitle": "Baryonyx Wealden wet-woodland habitat — landscape",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 蚺蛇 landscape created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored baryonyx riverside wet-woodland background without modification; its river mud, ferns and water pools match the boa's tropical woodland life, and the parent-facing note records the scene as an artistic setting."
+    ]
+  },
+  {
+    "id": "boa-constrictor:backgrounds/portrait.webp",
+    "animalId": "boa-constrictor",
+    "assetPath": "backgrounds/portrait.webp",
+    "assetKind": "background",
+    "sourceTitle": "Baryonyx Wealden wet-woodland habitat — portrait",
+    "author": "OpenAI built-in image_gen",
+    "licenseName": "CC BY-NC-SA 4.0 project-owned ImageGen output",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Project-generated 蚺蛇 portrait created with OpenAI ImageGen.",
+    "modifications": [
+      "Reused the already-reviewed project-authored baryonyx portrait background without modification."
+    ]
+  },
+  {
+    "id": "boa-constrictor:images/poster-portrait.webp",
+    "animalId": "boa-constrictor",
+    "assetPath": "images/poster-portrait.webp",
+    "assetKind": "poster",
+    "sourceTitle": "蚺蛇 transparent portrait model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "boa-constrictor:images/poster.webp",
+    "animalId": "boa-constrictor",
+    "assetPath": "images/poster.webp",
+    "assetKind": "poster",
+    "sourceTitle": "蚺蛇 transparent model still",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.",
+      "Encoded as lossless WebP without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "boa-constrictor:images/thumbnail.webp",
+    "animalId": "boa-constrictor",
+    "assetPath": "images/thumbnail.webp",
+    "assetKind": "thumbnail",
+    "sourceTitle": "蚺蛇 collection thumbnail",
+    "author": "Prehistoric Animal Museum",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "“Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.",
+    "modifications": [
+      "Resized and centred the complete silhouette with animal-specific safe margins.",
+      "Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks."
+    ]
+  },
+  {
+    "id": "boa-constrictor:model/model.glb",
+    "animalId": "boa-constrictor",
+    "assetPath": "model/model.glb",
+    "assetKind": "model",
+    "sourceTitle": "Boa Constrictor Hispaniola",
+    "author": "franciscomedina77 (Sketchfab user)",
+    "licenseName": "Creative Commons Attribution 4.0 International",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://sketchfab.com/3d-models/boa-constrictor-hispaniola-2090cbe07a0d405680ebaaedfb913095",
+    "attribution": "“Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.",
+    "modifications": [
+      "Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.",
+      "Decimated the 499,846-face autoconverted photogrammetry mesh to 99,995 faces in Blender (uniform collapse) before normalization, keeping the reviewed 1024x1024 colour texture; recorded destructive geometry simplification.",
+      "The Sketchfab autoconverted GLB shipped no rig or animation; the project-authored deterministic breathing Idle adds the only motion (recorded as a project-authored replacement).",
+      "Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.",
+      "The exhibit presents the living boa constrictor under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing."
+    ]
+  },
+  {
     "id": "carnotaurus:audio/narration.en.mp3",
     "animalId": "carnotaurus",
     "assetPath": "audio/narration.en.mp3",

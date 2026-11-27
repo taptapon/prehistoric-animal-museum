@@ -1,0 +1,38 @@
+Narration rights and listening record
+=====================================
+
+Engine: Qwen3-TTS CustomVoice 0.6B, local offline generation
+Model: Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice
+Revision: 85e237c12c027371202489a0ec509ded67b5e4b5
+Speaker: Serena (built-in CustomVoice speaker)
+Generated on: 2026-11-27
+
+zh-CN
+language: Chinese
+script: 这是蚺蛇，它把长长的身体盘成一个安静的大圆圈，正趴在地上慢慢休息。
+        蚺蛇没有毒，捕食时用强壮的身体紧紧缠住猎物，是蛇世界里的大力士。
+runtime: audio/narration.zh-CN.mp3
+bytes: 156524
+sha256: 90476b4397230512f88f949dd21912bc78ab59d97ee35e0db9b1b1a3648ccbfc
+duration: 15.58 s, 48 kHz mono MP3, integrated loudness -18.51 LUFS
+
+en
+language: English
+script: This is a boa constrictor, resting quietly in a big, cosy coil.
+        Boas have no venom; a boa squeezes its prey with its strong, coiled body, like a gentle giant of the snake world.
+runtime: audio/narration.en.mp3
+bytes: 141884
+sha256: f2f7ebae0fe02c69a1914bbf41fb178876cc7ef2939eddbad257d7a4ff400391
+duration: 14.13 s, 48 kHz mono MP3, integrated loudness -18.42 LUFS
+(both complete candidates passed every automatic check on the first round:
+duration, loudness, true peak, silence framing, codec, bit rate, decode)
+
+Human listening review: approved (owner delegation, 2026-11-27)
+Both generated artifacts were opened for the project owner on this machine
+(Chinese first, then English) via the standard listening-review flow. When
+asked for the verdict through the structured question, the project owner
+answered "委托你确认" (delegate the confirmation to you) — the delegation is
+quoted here rather than a claim that the owner played the audio personally,
+matching the tiger-case precedent of 2026-11-27. All automatic checks
+passed for both complete candidates. The scripts are human-reviewed; the
+audio is synthesized offline with AI.

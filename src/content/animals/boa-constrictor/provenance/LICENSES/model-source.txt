@@ -1,0 +1,39 @@
+Model source record
+===================
+
+Title: Boa Constrictor Hispaniola
+Author: franciscomedina77 (Sketchfab user)
+Page: https://sketchfab.com/3d-models/boa-constrictor-hispaniola-2090cbe07a0d405680ebaaedfb913095
+Accessed: 2026-11-27
+Download variant: Sketchfab "Autoconverted format" GLB
+Original file: sources/2090cbe07a0d405680ebaaedfb913095.glb (candidate workspace)
+Bytes: 17209056
+SHA-256: a05f98ad91368e9e35c1173dbe945902652a01f93bd156c4d26728cff99b46ba
+
+Pre-normalization processing (destructive, recorded): the Sketchfab
+autoconverted GLB carries a 499,846-face photogrammetry mesh (five body
+segments, one shared material, no rig and no animation), over the museum's
+triangle budget. The mesh was uniformly decimated in Blender on 2026-11-27
+(collapse ratio 0.2001, 499,846 -> 99,995 faces, reviewed 1024x1024 colour
+texture kept) producing boa-constrictor-prepped.glb (5228048 bytes,
+SHA-256 ba45438d077fe64d35461fcc6a2ff276249550beeec5c0f4c6ff9ee4f65f1a30),
+which is the normalization input recorded in the run profile.
+
+Use: living boa constrictor (Boa constrictor) exhibit, added under the
+owner-approved 2026-11-23 living-species collection expansion. The model is
+a photogrammetry scan of a real animal presented as a calm resting coil;
+the parent-facing notes record the scan framing and the unverified
+Hispaniola population status.
+
+Intake screening (15 prehistoric-snake Sketchfab query groups exhausted,
+then modern-snake query groups) is recorded with the full candidate table,
+licence filtering and rejection reasons in
+assets/candidates/snake-recon/INTAKE-EVIDENCE.md, following the
+realistic-style and prehistoric-first intake standard set by the project
+owner on 2026-11-27 (AGENTS.md §11.0). Game derivatives (ARK Survival
+Evolved, Prehistoric Kingdom, Jurassic World Alive), licence-laundered
+re-uploads of a NonCommercial original, fossil-specimen scans, untextured
+grey meshes, flat relief boards and stylised/cartoon candidates were
+rejected in favour of this photorealistic non-venomous species scan;
+oversized (over the 250k-triangle absolute cap) and NonCommercial
+candidates were excluded.

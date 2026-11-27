@@ -271,6 +271,12 @@ export const reviewedBackgroundSources = {
 >
 
 export const reviewedEnglishNarrationArtifacts = {
+  'boa-constrictor': {
+    generatedOn: '2026-11-27',
+    bytes: 141_884,
+    sha256:
+      'f2f7ebae0fe02c69a1914bbf41fb178876cc7ef2939eddbad257d7a4ff400391',
+  },
   tiger: {
     generatedOn: '2026-11-27',
     bytes: 156_044,

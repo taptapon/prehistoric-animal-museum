@@ -690,6 +690,89 @@ content, contributions, and Brand Assets follow the separate scopes in
 - Modifications:
   - Relinked and embedded the supplied textures, then compressed the runtime model for browser delivery.
   - Retimed the source seamless motion into a deterministic closed Idle and preserved the reviewed long snout and hand claw.
+## 蚺蛇 (`boa-constrictor`)
+
+### `audio/narration.en.mp3`
+
+- Asset type: narration
+- Source: Boa constrictor English narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated English narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `f2f7ebae0fe02c69a1914bbf41fb178876cc7ef2939eddbad257d7a4ff400391`
+- Modifications:
+  - Generated offline from the exact reviewed English two-sentence script with the Serena voice.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `audio/narration.zh-CN.mp3`
+
+- Asset type: narration
+- Source: 蚺蛇 Mandarin narration, generated with Qwen3-TTS CustomVoice on 2026-11-27
+- License: [CC BY-NC-SA 4.0 project-owned Qwen3-TTS output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated Mandarin narration produced locally with Qwen3-TTS 0.6B CustomVoice (Serena).
+- Runtime SHA-256: `90476b4397230512f88f949dd21912bc78ab59d97ee35e0db9b1b1a3648ccbfc`
+- Modifications:
+  - Generated offline from the exact reviewed two-sentence script.
+  - Normalized to a reviewed 48 kHz mono MP3 without runtime synthesis.
+### `backgrounds/landscape.webp`
+
+- Asset type: background
+- Source: Baryonyx Wealden wet-woodland habitat — landscape, generated with OpenAI built-in image_gen on 2026-08-29
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 蚺蛇 landscape created with OpenAI ImageGen.
+- Runtime SHA-256: `1b5ebdeff9a75fae21d0fe3c43102b0d5a73849add10b95b997567c0a49aa2a4`
+- Modifications:
+  - Reused the already-reviewed project-authored baryonyx riverside wet-woodland background without modification; its river mud, ferns and water pools match the boa's tropical woodland life, and the parent-facing note records the scene as an artistic setting.
+### `backgrounds/portrait.webp`
+
+- Asset type: background
+- Source: Baryonyx Wealden wet-woodland habitat — portrait, generated with OpenAI built-in image_gen on 2026-08-29
+- License: [CC BY-NC-SA 4.0 project-owned ImageGen output](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- Attribution: Project-generated 蚺蛇 portrait created with OpenAI ImageGen.
+- Runtime SHA-256: `e9d80b3bfe9aefc2ea93c2d3e2f909079e2ba1b25f1efee7cc1cf31f63a0ca85`
+- Modifications:
+  - Reused the already-reviewed project-authored baryonyx portrait background without modification.
+### `images/poster-portrait.webp`
+
+- Asset type: poster
+- Source: 蚺蛇 transparent portrait model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `235b05b5ae5a9cf77a31507533b5e54c39f395086777f070bfe102125e47e44e`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as exact lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/poster.webp`
+
+- Asset type: poster
+- Source: 蚺蛇 transparent model still, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `334685dd314239607e90a5049b3ea5818bcefea09a8a928c672bb22eaab14685`
+- Modifications:
+  - Removed the habitat composite and all interface chrome; kept only the model and contact shadow on a transparent background.
+  - Encoded as lossless WebP without text, controls, labels, logos, or watermarks.
+### `images/thumbnail.webp`
+
+- Asset type: thumbnail
+- Source: 蚺蛇 collection thumbnail, derived on 2026-11-27
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum. Scene art generated for this project.
+- Runtime SHA-256: `4e2fd53cb0f5b4a056945e0ac9ccd47ed2b177d090c756b0147a8492bc57e245`
+- Modifications:
+  - Resized and centred the complete silhouette with animal-specific safe margins.
+  - Encoded as 320 × 320 lossy WebP at quality 88 without text, controls, labels, logos, or watermarks.
+### `model/model.glb`
+
+- Asset type: model
+- Source: [Boa Constrictor Hispaniola](https://sketchfab.com/3d-models/boa-constrictor-hispaniola-2090cbe07a0d405680ebaaedfb913095) by franciscomedina77 (Sketchfab user)
+- License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: “Boa Constrictor Hispaniola” by franciscomedina77 (Sketchfab user), CC BY 4.0; modified for the Prehistoric Animal Museum.
+- Runtime SHA-256: `d806230fd555399c8d7360f75ce10e56cbdc7e142436f44e8e80a6f2b1f5c756`
+- Modifications:
+  - Used the CC BY 4.0 source directly; the licence permits modification and redistribution with attribution recorded here and in the public credits.
+  - Decimated the 499,846-face autoconverted photogrammetry mesh to 99,995 faces in Blender (uniform collapse) before normalization, keeping the reviewed 1024x1024 colour texture; recorded destructive geometry simplification.
+  - The Sketchfab autoconverted GLB shipped no rig or animation; the project-authored deterministic breathing Idle adds the only motion (recorded as a project-authored replacement).
+  - Reoriented the source body length axis into the canonical X body axis and rescaled it to the museum target length, grounded for a land exhibit.
+  - The exhibit presents the living boa constrictor under the owner-approved 2026-11-23 collection expansion; the parent-facing note records this framing.
 ## 食肉牛龙 (`carnotaurus`)
 
 ### `audio/narration.en.mp3`
