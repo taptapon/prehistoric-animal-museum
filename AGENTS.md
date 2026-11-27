@@ -256,9 +256,9 @@ curl -s "https://api.sketchfab.com/v3/search?type=models&q=prehistoric+wolf&down
 - 用 GLB 头解析包围盒，任一维 ≪ 另两维（如 16.85 × 19.63 × **0.65**）= 浮雕板/贴图板，直接排除。
 - 记录候选表到 `assets/candidates/<id>-recon/INTAKE-EVIDENCE.md`：名称、uid、作者、许可、顶点/动画数、缩略图判读、取舍理由。
 
-### 11.3 下载：owner token（不落盘）
+### 11.3 下载：owner token（权威存放 `~/.config/sketchfab/token`）
 
-- 搜索接口匿名可用；`/v3/models/<uid>/download` 需要 **owner 的 Sketchfab API token**（设置页 → API Token）。向用户口头索取，只用于当次 curl，**绝不写入仓库、脚本、日志或记忆文件**；交付完成后提醒用户重置 token。
+- 搜索接口匿名可用；`/v3/models/<uid>/download` 需要 **owner 的 Sketchfab API token**（账号 RawFox8864）。**权威存放（2026-11-27 用户裁定）：`~/.config/sketchfab/token`（600，git 仓库外）**——使用时 `SKFB_TOKEN=$(cat ~/.config/sketchfab/token)` 读入 shell 变量，不回显、不写入仓库/脚本/日志/记忆/会话消息；文件缺失或 API 报 `Invalid API token` 时向用户索取新 token 并写回该文件（`chmod 600`）。owner 轮换 token 后同步更新此文件。
 - signed CDN（`sketchfab-prod-media.s3.amazonaws.com`）直连会超时：走 Clash 代理 `-x http://127.0.0.1:7897`，并用 `curl -C -` 断点续传；完成后比对 `glb.size` 与本地字节数，立即 `shasum -a 256`。
 - 下载变体固定选 **Autoconverted → GLB**；不要 source format（.blend/.fbx 管线不直接吃）。
 - 原始文件与下载回执、许可截图全部留在 `assets/candidates/<id>-recon/`（git 忽略），绝不 `git add -f`。
@@ -335,7 +335,7 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
 - **源材质默认值**：两个模型均自带显式 metallic 0.0（作者保存时已设置），未触发河马案黑剪影坑；但每模型仍须先查 GLB JSON chunk 再下结论。
 - **TTS 批量**：一次 driver 跑两只 × 双语 8 段（model load 一次），单段失败注释其余只重跑失败段（driver 留在 tiger-recon）。tiger en 首轮 18.8s 超门，缩词至 15.5s。
 - **vite dev 热载陷阱**：改 package.ts 的 presentation 后 dev server 不热载——截图前重启（`NODE_OPTIONS=--import tsx npm run dev`，详见 §13；本条已同步 agent 记忆）。
-- **token 复用**：owner token 在既往会话记录中可检索（本例经用户明确指示找回，账号 RawFox8864）；用完删临时副本并提醒 owner 重置。
+- **token 复用**：owner token 已落权威文件 `~/.config/sketchfab/token`（2026-11-27 起，见 §11.3），后续会话直接读该文件，不再扫会话转录找回；用完删临时副本。
 
 ## 13. dev server 基线问题（本机实测，2026-11-27）
 
