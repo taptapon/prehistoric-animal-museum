@@ -334,5 +334,17 @@ Sketchfab 穷尽（≥15 组检索词、候选全目检）后仍无合规活体�
 - **head-side gate 与视觉约定**：gate 只查 yaw 投影后 head/tail 的屏幕 x 顺序，`initialHeadSide` 可 left 可 right——虎 -35°（头左）配 `right`、兔 145°（脸朝观众偏右）配 `left` 均绿。别硬套上一只的 yaw，逐模型截图实证。
 - **源材质默认值**：两个模型均自带显式 metallic 0.0（作者保存时已设置），未触发河马案黑剪影坑；但每模型仍须先查 GLB JSON chunk 再下结论。
 - **TTS 批量**：一次 driver 跑两只 × 双语 8 段（model load 一次），单段失败注释其余只重跑失败段（driver 留在 tiger-recon）。tiger en 首轮 18.8s 超门，缩词至 15.5s。
-- **vite dev 热载陷阱**：改 package.ts 的 presentation 后 dev server 不热载——截图前重启（`NODE_OPTIONS=--import tsx npm run dev`，见本仓 dev server 基线问题；本条已同步 agent 记忆）。
+- **vite dev 热载陷阱**：改 package.ts 的 presentation 后 dev server 不热载——截图前重启（`NODE_OPTIONS=--import tsx npm run dev`，详见 §13；本条已同步 agent 记忆）。
 - **token 复用**：owner token 在既往会话记录中可检索（本例经用户明确指示找回，账号 RawFox8864）；用完删临时副本并提醒 owner 重置。
+
+## 13. dev server 基线问题（本机实测，2026-11-27）
+
+`npm run dev` 在 vite 8 下开箱即挂（与新增动物无关）的根因与修法，所有要起 dev server / 截图的 agent 先读本节：
+
+- **根因**：`vite.config.ts` 的 `canonicalAnimalCatalog` 经 tsx `tsImport` 动态加载动物 `package.ts`；vite 8 的 config 加载环境里 tsx loader 未注册 → Node 默认解析器拒绝无扩展名 import（`./content.en`），报 `ERR_MODULE_NOT_FOUND`（allosaurus-pandras）。
+- **修法**：`NODE_OPTIONS="--import tsx" npm run dev`（全进程注入 tsx loader），约 540ms ready。
+- **只监听 IPv6 localhost**：curl / 截图脚本必须用 `http://localhost:5173/`；写 `127.0.0.1` 会 000 无响应。
+- **改 presentation 不热载**：改 `package.ts`（如 `initialYawDegrees`）后 vite dev 不会热载生效，截图拿到旧朝向（两轮截图像素级雷同即此症）——**改完必须 kill + 重启 dev server 再截图**。
+- **无头 Chrome 截图链已全链验证**：swiftshader（§11.6 参数）+ 9333 调试口 + `[data-ready-animal-id]` 点击流。
+- **`npm run review` 本 checkout 不可用**：`validate:review` 需要已 gitignore 的 review 素材（`assets/review-generated/` 等，本机没有），报错属预期，不是环境坏了。
+- **生产 `build:site` 的旁白门**：前置 `validate:content` 会被旁白听审 pending 门拦（`NARRATION_LISTENING_EVIDENCE_INVALID`）——这是设计内红线，owner 听审通过后写入 approved 才放行。
